@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		102B56961D1A3E7900165942 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102B56951D1A3E7900165942 /* AppDelegate.swift */; };
-		102B56981D1A3E7900165942 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102B56971D1A3E7900165942 /* ViewController.swift */; };
+		102B56981D1A3E7900165942 /* DecisionListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102B56971D1A3E7900165942 /* DecisionListVC.swift */; };
 		102B569B1D1A3E7900165942 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 102B56991D1A3E7900165942 /* Main.storyboard */; };
 		102B569E1D1A3E7900165942 /* DecisionsDecisons.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 102B569C1D1A3E7900165942 /* DecisionsDecisons.xcdatamodeld */; };
 		102B56A01D1A3E7900165942 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 102B569F1D1A3E7900165942 /* Assets.xcassets */; };
@@ -46,7 +46,7 @@
 /* Begin PBXFileReference section */
 		102B56921D1A3E7900165942 /* DecisionsDecisons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DecisionsDecisons.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		102B56951D1A3E7900165942 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		102B56971D1A3E7900165942 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		102B56971D1A3E7900165942 /* DecisionListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecisionListVC.swift; sourceTree = "<group>"; };
 		102B569A1D1A3E7900165942 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		102B569D1D1A3E7900165942 /* DecisionsDecisons.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DecisionsDecisons.xcdatamodel; sourceTree = "<group>"; };
 		102B569F1D1A3E7900165942 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -145,7 +145,7 @@
 		102B56CA1D1B6EDD00165942 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				102B56971D1A3E7900165942 /* ViewController.swift */,
+				102B56971D1A3E7900165942 /* DecisionListVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -300,7 +300,7 @@
 			files = (
 				102B569E1D1A3E7900165942 /* DecisionsDecisons.xcdatamodeld in Sources */,
 				102B56C71D1B6EA000165942 /* Criterion.swift in Sources */,
-				102B56981D1A3E7900165942 /* ViewController.swift in Sources */,
+				102B56981D1A3E7900165942 /* DecisionListVC.swift in Sources */,
 				102B56CE1D1B714B00165942 /* DecisionOption.swift in Sources */,
 				102B56961D1A3E7900165942 /* AppDelegate.swift in Sources */,
 				102B56D21D1B744E00165942 /* Decision.swift in Sources */,
@@ -534,6 +534,7 @@
 				102B56BF1D1A3E7A00165942 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		102B56C01D1A3E7A00165942 /* Build configuration list for PBXNativeTarget "DecisionsDecisonsTests" */ = {
 			isa = XCConfigurationList;
@@ -542,6 +543,7 @@
 				102B56C21D1A3E7A00165942 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		102B56C31D1A3E7A00165942 /* Build configuration list for PBXNativeTarget "DecisionsDecisonsUITests" */ = {
 			isa = XCConfigurationList;
@@ -550,6 +552,7 @@
 				102B56C51D1A3E7A00165942 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
