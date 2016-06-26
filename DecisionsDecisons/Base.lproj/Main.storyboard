@@ -4,6 +4,12 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="SF-UI-Display-Heavy.otf">
+            <string>SFUIDisplay-Heavy</string>
+            <string>SFUIDisplay-Heavy</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Decision ListVC-->
         <scene sceneID="tne-QT-ifu">
@@ -49,17 +55,66 @@
                                     <size key="itemSize" width="150" height="150"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="25" minY="25" maxX="25" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="decisionCell" id="iSn-DU-vGQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="decisionCell" id="iSn-DU-vGQ" customClass="DecisionCell" customModule="DecisionsDecisons" customModuleProvider="target">
+                                        <rect key="frame" x="25" y="25" width="150" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultDecImg" translatesAutoresizingMaskIntoConstraints="NO" id="HMm-9V-Hrh">
+                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="77"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="77" id="Tgs-js-t0w"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQA-4R-qd4">
+                                                    <rect key="frame" x="8" y="83" width="134" height="29"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="29" id="SCH-nS-z48"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="SFUIDisplay-Heavy" family="SF UI Display" pointSize="16"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dv1-Ha-Yv4">
+                                                    <rect key="frame" x="8" y="113" width="134" height="29"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="29" id="1iY-cJ-iu9"/>
+                                                        <constraint firstAttribute="height" constant="29" id="mdG-wS-j1a"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="SFUIDisplay-Heavy" family="SF UI Display" pointSize="16"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="mdG-wS-j1a"/>
+                                                        </mask>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <color key="backgroundColor" red="0.058823529409999999" green="0.5568627451" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="EQA-4R-qd4" firstAttribute="leading" secondItem="iSn-DU-vGQ" secondAttribute="leading" constant="8" id="Jqr-hh-kVE"/>
+                                            <constraint firstItem="dv1-Ha-Yv4" firstAttribute="leading" secondItem="iSn-DU-vGQ" secondAttribute="leading" constant="8" id="Nb2-ZT-6VK"/>
+                                            <constraint firstAttribute="trailing" secondItem="EQA-4R-qd4" secondAttribute="trailing" constant="8" id="Xvj-wo-y2v"/>
+                                            <constraint firstAttribute="trailing" secondItem="HMm-9V-Hrh" secondAttribute="trailing" id="Y4q-8M-WRs"/>
+                                            <constraint firstAttribute="bottom" secondItem="dv1-Ha-Yv4" secondAttribute="bottom" constant="8" id="ZTB-hD-SlR"/>
+                                            <constraint firstAttribute="trailing" secondItem="dv1-Ha-Yv4" secondAttribute="trailing" constant="8" id="mUl-Fb-4Td"/>
+                                            <constraint firstItem="HMm-9V-Hrh" firstAttribute="top" secondItem="iSn-DU-vGQ" secondAttribute="top" id="u5P-4V-iup"/>
+                                            <constraint firstItem="EQA-4R-qd4" firstAttribute="top" secondItem="HMm-9V-Hrh" secondAttribute="bottom" constant="6" id="vzD-SC-9EI"/>
+                                            <constraint firstItem="HMm-9V-Hrh" firstAttribute="leading" secondItem="iSn-DU-vGQ" secondAttribute="leading" id="yhi-8v-gFa"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="countLabel" destination="dv1-Ha-Yv4" id="m3M-zo-wB3"/>
+                                            <outlet property="image" destination="HMm-9V-Hrh" id="yb6-q0-Hnc"/>
+                                            <outlet property="titleLabel" destination="EQA-4R-qd4" id="bVp-9e-fjg"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -82,6 +137,9 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="WUb-Um-3WM"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="collection" destination="SqO-3m-gx9" id="fkA-8q-qYC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -118,5 +176,6 @@
     <resources>
         <image name="Add New" width="50" height="47"/>
         <image name="bground gradient" width="375" height="582"/>
+        <image name="defaultDecImg" width="640" height="424"/>
     </resources>
 </document>

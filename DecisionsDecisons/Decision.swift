@@ -9,6 +9,9 @@
 import Foundation
 
 struct Decision {
-  private var _title: String
-  private var _options: [DecisionOption]
+  
+  var title: String
+  
+  var options: [DecisionOption] 
+  
 }
