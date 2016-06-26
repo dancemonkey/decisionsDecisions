@@ -1,5 +1,5 @@
 //
-//  DecisionOption.swift
+//  Choice.swift
 //  DecisionsDecisons
 //
 //  Created by Drew Lanning on 6/22/16.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class DecisionOption {
+class Choice {
   
   private var _title: String              // only value NEEDED when creating this DecisionOption
   var title: String {

@@ -18,12 +18,10 @@
 		102B56C71D1B6EA000165942 /* Criterion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102B56C61D1B6EA000165942 /* Criterion.swift */; };
 		102B56C81D1B6EAC00165942 /* Criterion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102B56C61D1B6EA000165942 /* Criterion.swift */; };
 		102B56C91D1B6EAD00165942 /* Criterion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102B56C61D1B6EA000165942 /* Criterion.swift */; };
-		102B56CE1D1B714B00165942 /* DecisionOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102B56CD1D1B714B00165942 /* DecisionOption.swift */; };
-		102B56CF1D1B714B00165942 /* DecisionOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102B56CD1D1B714B00165942 /* DecisionOption.swift */; };
-		102B56D01D1B714B00165942 /* DecisionOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102B56CD1D1B714B00165942 /* DecisionOption.swift */; };
 		102B56D21D1B744E00165942 /* Decision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102B56D11D1B744E00165942 /* Decision.swift */; };
 		102B56D31D1B744E00165942 /* Decision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102B56D11D1B744E00165942 /* Decision.swift */; };
 		102B56D41D1B744E00165942 /* Decision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102B56D11D1B744E00165942 /* Decision.swift */; };
+		105E67AE1D2072FE003AC6F0 /* Choice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105E67AD1D2072FE003AC6F0 /* Choice.swift */; };
 		10AC2A7B1D1F861E00C273C7 /* Datasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CC16CF1D1F7DC1000A412A /* Datasource.swift */; };
 		10AC2A7C1D1F861F00C273C7 /* Datasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CC16CF1D1F7DC1000A412A /* Datasource.swift */; };
 		10AC2A7D1D1F862200C273C7 /* DecisionListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102B56971D1A3E7900165942 /* DecisionListVC.swift */; };
@@ -76,8 +74,8 @@
 		102B56B81D1A3E7A00165942 /* DecisionsDecisonsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecisionsDecisonsUITests.swift; sourceTree = "<group>"; };
 		102B56BA1D1A3E7A00165942 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		102B56C61D1B6EA000165942 /* Criterion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Criterion.swift; sourceTree = "<group>"; };
-		102B56CD1D1B714B00165942 /* DecisionOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecisionOption.swift; sourceTree = "<group>"; };
 		102B56D11D1B744E00165942 /* Decision.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Decision.swift; sourceTree = "<group>"; };
+		105E67AD1D2072FE003AC6F0 /* Choice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Choice.swift; sourceTree = "<group>"; };
 		10AC2A821D1F892800C273C7 /* SF-UI-Display-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Black.otf"; sourceTree = "<group>"; };
 		10AC2A831D1F892800C273C7 /* SF-UI-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Bold.otf"; sourceTree = "<group>"; };
 		10AC2A841D1F892800C273C7 /* SF-UI-Display-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Heavy.otf"; sourceTree = "<group>"; };
@@ -192,8 +190,8 @@
 			isa = PBXGroup;
 			children = (
 				102B56C61D1B6EA000165942 /* Criterion.swift */,
-				102B56CD1D1B714B00165942 /* DecisionOption.swift */,
 				102B56D11D1B744E00165942 /* Decision.swift */,
+				105E67AD1D2072FE003AC6F0 /* Choice.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -364,9 +362,9 @@
 			files = (
 				102B569E1D1A3E7900165942 /* DecisionsDecisons.xcdatamodeld in Sources */,
 				102B56C71D1B6EA000165942 /* Criterion.swift in Sources */,
+				105E67AE1D2072FE003AC6F0 /* Choice.swift in Sources */,
 				102B56981D1A3E7900165942 /* DecisionListVC.swift in Sources */,
 				10AC2A951D1F895C00C273C7 /* DecisionCell.swift in Sources */,
-				102B56CE1D1B714B00165942 /* DecisionOption.swift in Sources */,
 				102B56961D1A3E7900165942 /* AppDelegate.swift in Sources */,
 				102B56D21D1B744E00165942 /* Decision.swift in Sources */,
 				10CC16D01D1F7DC1000A412A /* Datasource.swift in Sources */,
@@ -378,7 +376,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				102B56AE1D1A3E7A00165942 /* DecisionsDecisonsTests.swift in Sources */,
-				102B56CF1D1B714B00165942 /* DecisionOption.swift in Sources */,
 				10AC2A7B1D1F861E00C273C7 /* Datasource.swift in Sources */,
 				102B56C81D1B6EAC00165942 /* Criterion.swift in Sources */,
 				10AC2A961D1F895C00C273C7 /* DecisionCell.swift in Sources */,
@@ -392,7 +389,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				102B56B91D1A3E7A00165942 /* DecisionsDecisonsUITests.swift in Sources */,
-				102B56D01D1B714B00165942 /* DecisionOption.swift in Sources */,
 				10AC2A7C1D1F861F00C273C7 /* Datasource.swift in Sources */,
 				102B56C91D1B6EAD00165942 /* Criterion.swift in Sources */,
 				10AC2A971D1F895C00C273C7 /* DecisionCell.swift in Sources */,

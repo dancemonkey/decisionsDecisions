@@ -11,7 +11,20 @@ import Foundation
 struct Decision {
   
   var title: String
+  var mappable: Bool = false
+  var includePhoto: Bool = false
+  var choices: [Choice]
   
-  var options: [DecisionOption] 
+  init(title: String, choices: [Choice]) {
+    self.title = title
+    self.choices = choices
+  }
+  
+  init(title: String, mappable: Bool, includePhoto: Bool, choices: [Choice]) {
+    self.title = title
+    self.choices = choices
+    self.mappable = mappable
+    self.includePhoto = includePhoto
+  }
   
 }

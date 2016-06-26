@@ -15,9 +15,9 @@ class DecisionCell: UICollectionViewCell {
   
   func configCell(withDecision decision: Decision) {
     self.titleLabel.text = decision.title
-    self.countLabel.text = "\(decision.options.count) Choices"
+    self.countLabel.text = "\(decision.choices.count) Choices"
     
-    if let img = decision.options.first?.imgURL {
+    if let img = decision.choices.first?.imgURL {
       self.image.image = UIImage(contentsOfFile: img)
     } else {
       self.image.image = UIImage(named: "defaultDecImg")
