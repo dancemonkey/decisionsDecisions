@@ -23,11 +23,6 @@ class DecisionListVC: UIViewController, UICollectionViewDelegate, UICollectionVi
     
   }
   
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
-  
   func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
     return 1
   }
