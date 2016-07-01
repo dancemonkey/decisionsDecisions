@@ -23,6 +23,7 @@ class AddDecisionVC: UIViewController {
   
   @IBAction func nextBtnTapped(sender: UIButton) {
     self.newDecision = Decision(title: self.decisionNameTxtFld.text!, choices: [Choice]())
+    performSegueWithIdentifier("nextStep", sender: self)
   }
   
   @IBAction func textFieldChanged(sender: UITextField) {
@@ -30,6 +31,15 @@ class AddDecisionVC: UIViewController {
       self.nextButton.enabled = true
     } else {
       self.nextButton.enabled = false
+    }
+  }
+  
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if segue.identifier == "nextStep" {
+      // pass newDecision to next step in the chain
+      if let nextVC = segue.destinationViewController as? IncludePhotoVC {
+        nextVC.newDecision = self.newDecision
+      }
     }
   }
 

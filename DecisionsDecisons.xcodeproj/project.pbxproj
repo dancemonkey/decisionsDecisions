@@ -42,6 +42,9 @@
 		10AC2A961D1F895C00C273C7 /* DecisionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AC2A941D1F895C00C273C7 /* DecisionCell.swift */; };
 		10AC2A971D1F895C00C273C7 /* DecisionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AC2A941D1F895C00C273C7 /* DecisionCell.swift */; };
 		10CC16D01D1F7DC1000A412A /* Datasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CC16CF1D1F7DC1000A412A /* Datasource.swift */; };
+		10ED1CB81D2629CC004CB49E /* IncludePhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ED1CB71D2629CC004CB49E /* IncludePhotoVC.swift */; };
+		10ED1CB91D2629CC004CB49E /* IncludePhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ED1CB71D2629CC004CB49E /* IncludePhotoVC.swift */; };
+		10ED1CBA1D2629CC004CB49E /* IncludePhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ED1CB71D2629CC004CB49E /* IncludePhotoVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +95,7 @@
 		10AC2A8A1D1F892800C273C7 /* SF-UI-Display-Ultralight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Ultralight.otf"; sourceTree = "<group>"; };
 		10AC2A941D1F895C00C273C7 /* DecisionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecisionCell.swift; sourceTree = "<group>"; };
 		10CC16CF1D1F7DC1000A412A /* Datasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Datasource.swift; sourceTree = "<group>"; };
+		10ED1CB71D2629CC004CB49E /* IncludePhotoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncludePhotoVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +183,7 @@
 			children = (
 				102B56971D1A3E7900165942 /* DecisionListVC.swift */,
 				109F09021D20AE5D0034BC01 /* AddDecisionVC.swift */,
+				10ED1CB71D2629CC004CB49E /* IncludePhotoVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -373,6 +378,7 @@
 				102B56C71D1B6EA000165942 /* Criterion.swift in Sources */,
 				105E67AE1D2072FE003AC6F0 /* Choice.swift in Sources */,
 				102B56981D1A3E7900165942 /* DecisionListVC.swift in Sources */,
+				10ED1CB81D2629CC004CB49E /* IncludePhotoVC.swift in Sources */,
 				10AC2A951D1F895C00C273C7 /* DecisionCell.swift in Sources */,
 				102B56961D1A3E7900165942 /* AppDelegate.swift in Sources */,
 				102B56D21D1B744E00165942 /* Decision.swift in Sources */,
@@ -390,6 +396,7 @@
 				109F09041D20AE5D0034BC01 /* AddDecisionVC.swift in Sources */,
 				10AC2A961D1F895C00C273C7 /* DecisionCell.swift in Sources */,
 				10AC2A7D1D1F862200C273C7 /* DecisionListVC.swift in Sources */,
+				10ED1CB91D2629CC004CB49E /* IncludePhotoVC.swift in Sources */,
 				102B56D31D1B744E00165942 /* Decision.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,6 +411,7 @@
 				10AC2A971D1F895C00C273C7 /* DecisionCell.swift in Sources */,
 				10AC2A7E1D1F862300C273C7 /* DecisionListVC.swift in Sources */,
 				102B56D41D1B744E00165942 /* Decision.swift in Sources */,
+				10ED1CBA1D2629CC004CB49E /* IncludePhotoVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

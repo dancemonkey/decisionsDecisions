@@ -9,7 +9,11 @@
             <string>SFUIDisplay-Heavy</string>
             <string>SFUIDisplay-Heavy</string>
         </mutableArray>
+        <mutableArray key="SF-UI-Display-Medium.otf">
+            <string>SFUIDisplay-Medium</string>
+        </mutableArray>
         <mutableArray key="SF-UI-Display-Regular.otf">
+            <string>SFUIDisplay-Regular</string>
             <string>SFUIDisplay-Regular</string>
             <string>SFUIDisplay-Regular</string>
         </mutableArray>
@@ -169,7 +173,7 @@
                                 <rect key="frame" x="20" y="58" width="560" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="ZCy-FN-u58"/>
+                                    <constraint firstAttribute="height" constant="40" id="Eqh-mc-bcO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -177,101 +181,11 @@
                                     <action selector="textFieldChanged:" destination="GzU-Nl-q0B" eventType="editingChanged" id="RoO-Cr-PcW"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlZ-S2-BPM">
-                                <rect key="frame" x="20" y="106" width="560" height="84"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="84" id="Qeb-MJ-HnN"/>
-                                </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="Are you deciding on a new ">
-                                        <attributes>
-                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <font key="NSFont" size="18" name="SFUIDisplay-Regular"/>
-                                            <real key="NSKern" value="-0.40000000000000002"/>
-                                            <font key="NSOriginalFont" size="18" name="SFUIText-Light"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="1" lineHeightMultiple="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="job">
-                                        <attributes>
-                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <font key="NSFont" size="18" name="SFUIDisplay-Heavy"/>
-                                            <real key="NSKern" value="-0.40000000000000002"/>
-                                            <font key="NSOriginalFont" size="18" name="SFUIDisplay-Heavy"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="1" lineHeightMultiple="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="? Trying to pick a ">
-                                        <attributes>
-                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <font key="NSFont" size="18" name="SFUIDisplay-Regular"/>
-                                            <real key="NSKern" value="-0.40000000000000002"/>
-                                            <font key="NSOriginalFont" size="18" name="SFUIText-Light"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="1" lineHeightMultiple="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="house">
-                                        <attributes>
-                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <font key="NSFont" size="18" name="SFUIDisplay-Heavy"/>
-                                            <real key="NSKern" value="-0.40000000000000002"/>
-                                            <font key="NSOriginalFont" size="18" name="SFUIDisplay-Heavy"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="1" lineHeightMultiple="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="? Buying a new ">
-                                        <attributes>
-                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <font key="NSFont" size="18" name="SFUIDisplay-Regular"/>
-                                            <real key="NSKern" value="-0.40000000000000002"/>
-                                            <font key="NSOriginalFont" size="18" name="SFUIText-Light"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="1" lineHeightMultiple="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="laptop">
-                                        <attributes>
-                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <font key="NSFont" size="18" name="SFUIDisplay-Regular"/>
-                                            <real key="NSKern" value="-0.40000000000000002"/>
-                                            <font key="NSOriginalFont" size="18" name="SFUIText-Heavy"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="1" lineHeightMultiple="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="? Deciding where to take the family on a ">
-                                        <attributes>
-                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <font key="NSFont" size="18" name="SFUIDisplay-Regular"/>
-                                            <real key="NSKern" value="-0.40000000000000002"/>
-                                            <font key="NSOriginalFont" size="18" name="SFUIText-Light"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="1" lineHeightMultiple="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="vacation">
-                                        <attributes>
-                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <font key="NSFont" size="18" name="SFUIDisplay-Heavy"/>
-                                            <real key="NSKern" value="-0.40000000000000002"/>
-                                            <font key="NSOriginalFont" size="18" name="SFUIDisplay-Heavy"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="1" lineHeightMultiple="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="?">
-                                        <attributes>
-                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <font key="NSFont" size="18" name="SFUIDisplay-Regular"/>
-                                            <real key="NSKern" value="-0.40000000000000002"/>
-                                            <font key="NSOriginalFont" size="18" name="SFUIText-Light"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="1" lineHeightMultiple="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bte-T9-HXU">
-                                <rect key="frame" x="20" y="198" width="560" height="40"/>
+                                <rect key="frame" x="20" y="248" width="560" height="40"/>
                                 <color key="backgroundColor" red="1" green="0.57647058823529407" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="NzS-YG-cXI"/>
+                                    <constraint firstAttribute="height" constant="40" id="zvp-In-k0h"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="18"/>
                                 <state key="normal" title="Next -&gt;">
@@ -281,24 +195,113 @@
                                     <action selector="nextBtnTapped:" destination="GzU-Nl-q0B" eventType="touchUpInside" id="vR3-JL-vrP"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlZ-S2-BPM">
+                                <rect key="frame" x="20" y="106" width="560" height="134"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="134" id="I65-gR-fna"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Are you deciding on a new ">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="18" name="SFUIDisplay-Regular"/>
+                                            <real key="NSKern" value="-0.40000000000000002"/>
+                                            <font key="NSOriginalFont" size="18" name="SFUIText-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="1" lineHeightMultiple="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="job">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="18" name="SFUIDisplay-Heavy"/>
+                                            <real key="NSKern" value="-0.40000000000000002"/>
+                                            <font key="NSOriginalFont" size="18" name="SFUIDisplay-Heavy"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="1" lineHeightMultiple="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="? Trying to pick a ">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="18" name="SFUIDisplay-Regular"/>
+                                            <real key="NSKern" value="-0.40000000000000002"/>
+                                            <font key="NSOriginalFont" size="18" name="SFUIText-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="1" lineHeightMultiple="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="house">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="18" name="SFUIDisplay-Heavy"/>
+                                            <real key="NSKern" value="-0.40000000000000002"/>
+                                            <font key="NSOriginalFont" size="18" name="SFUIDisplay-Heavy"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="1" lineHeightMultiple="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="? Buying a new ">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="18" name="SFUIDisplay-Regular"/>
+                                            <real key="NSKern" value="-0.40000000000000002"/>
+                                            <font key="NSOriginalFont" size="18" name="SFUIText-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="1" lineHeightMultiple="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="laptop">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="18" name="SFUIDisplay-Regular"/>
+                                            <real key="NSKern" value="-0.40000000000000002"/>
+                                            <font key="NSOriginalFont" size="18" name="SFUIText-Heavy"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="1" lineHeightMultiple="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="? Deciding where to take the family on a ">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="18" name="SFUIDisplay-Regular"/>
+                                            <real key="NSKern" value="-0.40000000000000002"/>
+                                            <font key="NSOriginalFont" size="18" name="SFUIText-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="1" lineHeightMultiple="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="vacation">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="18" name="SFUIDisplay-Heavy"/>
+                                            <real key="NSKern" value="-0.40000000000000002"/>
+                                            <font key="NSOriginalFont" size="18" name="SFUIDisplay-Heavy"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="1" lineHeightMultiple="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="?">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="18" name="SFUIDisplay-Regular"/>
+                                            <real key="NSKern" value="-0.40000000000000002"/>
+                                            <font key="NSOriginalFont" size="18" name="SFUIText-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="1" lineHeightMultiple="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Bte-T9-HXU" firstAttribute="leading" secondItem="soB-zs-1rV" secondAttribute="leading" constant="20" id="6O2-WP-H4T"/>
                             <constraint firstAttribute="trailing" secondItem="HLR-GV-50F" secondAttribute="trailing" id="Dsl-Mt-LFg"/>
-                            <constraint firstAttribute="trailing" secondItem="rlZ-S2-BPM" secondAttribute="trailing" constant="20" id="Fb0-Y5-gfP"/>
+                            <constraint firstItem="ddc-qV-pfN" firstAttribute="leading" secondItem="soB-zs-1rV" secondAttribute="leading" constant="20" id="KIs-of-djv"/>
                             <constraint firstItem="HLR-GV-50F" firstAttribute="top" secondItem="ide-Vv-lyb" secondAttribute="bottom" id="Lvo-aS-2kk"/>
-                            <constraint firstAttribute="trailing" secondItem="ddc-qV-pfN" secondAttribute="trailing" constant="20" id="Pbk-f4-6Pr"/>
-                            <constraint firstAttribute="trailing" secondItem="Bte-T9-HXU" secondAttribute="trailing" constant="20" id="Ppc-Ff-sS2"/>
-                            <constraint firstItem="ddc-qV-pfN" firstAttribute="leading" secondItem="soB-zs-1rV" secondAttribute="leading" constant="20" id="Prs-su-oMY"/>
-                            <constraint firstItem="ddc-qV-pfN" firstAttribute="top" secondItem="ide-Vv-lyb" secondAttribute="bottom" constant="58" id="SfP-41-ghx"/>
-                            <constraint firstItem="rlZ-S2-BPM" firstAttribute="top" secondItem="ddc-qV-pfN" secondAttribute="bottom" constant="8" id="bN7-lk-aVy"/>
-                            <constraint firstItem="Bte-T9-HXU" firstAttribute="centerX" secondItem="soB-zs-1rV" secondAttribute="centerX" id="cNE-pj-0vn"/>
-                            <constraint firstItem="Bte-T9-HXU" firstAttribute="top" secondItem="rlZ-S2-BPM" secondAttribute="bottom" constant="8" id="f5H-ui-Gq2"/>
+                            <constraint firstItem="ddc-qV-pfN" firstAttribute="top" secondItem="ide-Vv-lyb" secondAttribute="bottom" constant="58" id="QsJ-oC-mFd"/>
+                            <constraint firstAttribute="trailing" secondItem="Bte-T9-HXU" secondAttribute="trailing" constant="20" id="R27-on-ISJ"/>
+                            <constraint firstItem="Bte-T9-HXU" firstAttribute="top" secondItem="rlZ-S2-BPM" secondAttribute="bottom" constant="8" id="Vrf-1h-1od"/>
+                            <constraint firstItem="rlZ-S2-BPM" firstAttribute="leading" secondItem="soB-zs-1rV" secondAttribute="leading" constant="20" id="aue-3b-pYk"/>
+                            <constraint firstItem="rlZ-S2-BPM" firstAttribute="top" secondItem="ddc-qV-pfN" secondAttribute="bottom" constant="8" id="deh-b7-axO"/>
+                            <constraint firstAttribute="trailing" secondItem="rlZ-S2-BPM" secondAttribute="trailing" constant="20" id="fJg-Ju-eQO"/>
+                            <constraint firstAttribute="trailing" secondItem="ddc-qV-pfN" secondAttribute="trailing" constant="20" id="fo4-eH-eXw"/>
                             <constraint firstItem="Bte-T9-HXU" firstAttribute="centerY" secondItem="soB-zs-1rV" secondAttribute="centerY" id="qQD-x6-deG"/>
-                            <constraint firstItem="rlZ-S2-BPM" firstAttribute="leading" secondItem="soB-zs-1rV" secondAttribute="leading" constant="20" id="qgc-AS-4L6"/>
                             <constraint firstItem="HLR-GV-50F" firstAttribute="leading" secondItem="soB-zs-1rV" secondAttribute="leading" id="syU-yn-kl2"/>
                             <constraint firstItem="6XX-Pm-vbX" firstAttribute="top" secondItem="HLR-GV-50F" secondAttribute="bottom" id="t2H-kP-xv4"/>
+                            <constraint firstItem="Bte-T9-HXU" firstAttribute="leading" secondItem="soB-zs-1rV" secondAttribute="leading" constant="20" id="v0z-Yx-RNd"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -309,11 +312,124 @@
                     <connections>
                         <outlet property="decisionNameTxtFld" destination="ddc-qV-pfN" id="i48-BC-D0t"/>
                         <outlet property="nextButton" destination="Bte-T9-HXU" id="VJm-9n-Ixy"/>
+                        <segue destination="93d-ip-2xg" kind="show" identifier="nextStep" id="scv-QB-xHo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HH3-fL-jbn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1117" y="1089"/>
+        </scene>
+        <!--Include a photo?-->
+        <scene sceneID="241-GA-vPG">
+            <objects>
+                <viewController title="Include a photo?" id="93d-ip-2xg" customClass="IncludePhotoVC" customModule="DecisionsDecisons" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CYc-y0-ixn"/>
+                        <viewControllerLayoutGuide type="bottom" id="kJB-Je-BM8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qUb-mT-7SF">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue bground gradient" translatesAutoresizingMaskIntoConstraints="NO" id="PgK-8p-Nef">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iU0-xv-8dK">
+                                <rect key="frame" x="20" y="248" width="560" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.57647058819999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="7PC-pm-V04"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="18"/>
+                                <state key="normal" title="Next -&gt;">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextBtnTapped:" destination="GzU-Nl-q0B" eventType="touchUpInside" id="y7P-7f-v8n"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gCI-ZB-HjZ">
+                                <rect key="frame" x="20" y="58" width="560" height="40"/>
+                                <subviews>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QTI-IH-8dK">
+                                        <rect key="frame" x="503" y="4" width="51" height="31"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="onTintColor">
+                                                <color key="value" red="1" green="0.57647058823529407" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Photos?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kue-r5-a6Z">
+                                        <rect key="frame" x="8" y="9" width="62" height="21"/>
+                                        <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                        <color key="textColor" red="0.058823529409999999" green="0.5568627451" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Kue-r5-a6Z" firstAttribute="leading" secondItem="gCI-ZB-HjZ" secondAttribute="leading" constant="8" id="1i3-Ee-hy5"/>
+                                    <constraint firstAttribute="height" constant="40" id="hJr-Rd-cej"/>
+                                    <constraint firstItem="Kue-r5-a6Z" firstAttribute="centerY" secondItem="gCI-ZB-HjZ" secondAttribute="centerY" id="nsJ-eH-lr2"/>
+                                    <constraint firstItem="QTI-IH-8dK" firstAttribute="centerY" secondItem="gCI-ZB-HjZ" secondAttribute="centerY" id="pnK-vU-d1J"/>
+                                    <constraint firstAttribute="trailing" secondItem="QTI-IH-8dK" secondAttribute="trailing" constant="8" id="uiK-AV-rxy"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gxy-cf-B3C">
+                                <rect key="frame" x="20" y="106" width="560" height="134"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="134" id="vPk-ZC-53i"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Would you like to include ">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="SFUIDisplay-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="photos">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="SFUIDisplay-Heavy"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> of each of the different options? 
+
+This is optional, and sometimes doesn’t make much sense, but visualizing each choice can be fun and can even help you decide!</string>
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="SFUIDisplay-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Gxy-cf-B3C" firstAttribute="top" secondItem="gCI-ZB-HjZ" secondAttribute="bottom" constant="8" id="2VR-ga-zk2"/>
+                            <constraint firstItem="iU0-xv-8dK" firstAttribute="leading" secondItem="qUb-mT-7SF" secondAttribute="leading" constant="20" id="Mld-DZ-xrl"/>
+                            <constraint firstAttribute="trailing" secondItem="gCI-ZB-HjZ" secondAttribute="trailing" constant="20" id="UVi-pG-h6d"/>
+                            <constraint firstItem="gCI-ZB-HjZ" firstAttribute="leading" secondItem="qUb-mT-7SF" secondAttribute="leading" constant="20" id="W1V-Aa-wWH"/>
+                            <constraint firstAttribute="trailing" secondItem="Gxy-cf-B3C" secondAttribute="trailing" constant="20" id="jVg-Nh-L64"/>
+                            <constraint firstAttribute="trailing" secondItem="iU0-xv-8dK" secondAttribute="trailing" constant="20" id="q33-wR-Cqy"/>
+                            <constraint firstItem="kJB-Je-BM8" firstAttribute="top" secondItem="PgK-8p-Nef" secondAttribute="bottom" id="qNy-T2-aMp"/>
+                            <constraint firstAttribute="trailing" secondItem="PgK-8p-Nef" secondAttribute="trailing" id="tnk-Mo-8ST"/>
+                            <constraint firstItem="iU0-xv-8dK" firstAttribute="top" secondItem="Gxy-cf-B3C" secondAttribute="bottom" constant="8" id="wV8-QL-A3t"/>
+                            <constraint firstItem="gCI-ZB-HjZ" firstAttribute="top" secondItem="CYc-y0-ixn" secondAttribute="bottom" constant="58" id="xKY-8c-nkd"/>
+                            <constraint firstItem="Gxy-cf-B3C" firstAttribute="leading" secondItem="qUb-mT-7SF" secondAttribute="leading" constant="20" id="xir-J4-DFb"/>
+                            <constraint firstItem="PgK-8p-Nef" firstAttribute="top" secondItem="CYc-y0-ixn" secondAttribute="bottom" id="zCR-Yn-qC9"/>
+                            <constraint firstItem="PgK-8p-Nef" firstAttribute="leading" secondItem="qUb-mT-7SF" secondAttribute="leading" id="zlR-XK-65I"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gDa-sD-la9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1117" y="1860"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="akI-ig-pci">
