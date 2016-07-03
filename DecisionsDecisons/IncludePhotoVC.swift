@@ -10,11 +10,26 @@ import UIKit
 
 class IncludePhotoVC: UIViewController {
   
-  var newDecision: Decision!
+  weak var newDecision: Decision!
+  @IBOutlet weak var photoSwitch: UISwitch!
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    print(newDecision)
+    print(newDecision.title, newDecision.includePhoto, newDecision.mappable)
+  }
+  
+  @IBAction func nextBtnTapped(sender: UIButton) {
+    newDecision.includePhoto = photoSwitch.on
+    performSegueWithIdentifier("nextStep", sender: self)
+  }
+  
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if segue.identifier == "nextStep" {
+      // pass newDecision to next step in the chain
+      if let nextVC = segue.destinationViewController as? MappableVC {
+        nextVC.newDecision = self.newDecision
+      }
+    }
   }
   
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Decision {
+class Decision {
   
   var title: String
   var mappable: Bool = false
