@@ -14,17 +14,20 @@ class Decision {
   var mappable: Bool = false
   var includePhoto: Bool = false
   var choices: [Choice]
+  var baseCriteria: [Criterion]
   
   init(title: String, choices: [Choice]) {
     self.title = title
     self.choices = choices
+    self.baseCriteria = [Criterion]()
   }
   
-  init(title: String, mappable: Bool, includePhoto: Bool, choices: [Choice]) {
+  init(title: String, mappable: Bool, includePhoto: Bool, choices: [Choice], criteria: [Criterion]) {
     self.title = title
     self.choices = choices
     self.mappable = mappable
     self.includePhoto = includePhoto
+    self.baseCriteria = criteria
   }
   
 }

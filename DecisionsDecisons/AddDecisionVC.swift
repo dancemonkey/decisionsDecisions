@@ -22,7 +22,7 @@ class AddDecisionVC: UIViewController {
   }
   
   @IBAction func nextBtnTapped(sender: UIButton) {
-    self.newDecision = Decision(title: self.decisionNameTxtFld.text!, choices: [Choice]())
+    self.newDecision?.title = decisionNameTxtFld.text!
     performSegueWithIdentifier("nextStep", sender: self)
   }
   

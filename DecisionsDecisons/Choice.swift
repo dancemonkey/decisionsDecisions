@@ -40,6 +40,11 @@ class Choice {
     return _imgURL
   }
   
+  init(title: String, criteria: [Criterion]) {
+    self._title = title
+    self._criteria = criteria
+  }
+  
   init(title: String) {
     self._title = title
   }

@@ -13,6 +13,7 @@ class DecisionListVC: UIViewController, UICollectionViewDelegate, UICollectionVi
   @IBOutlet weak var collection: UICollectionView!
   
   var decisionData = Datasource.ds.decisions
+  var newDecision: Decision?
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -20,7 +21,11 @@ class DecisionListVC: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     collection.dataSource = self
     collection.delegate = self
-    
+  }
+  
+  override func viewWillAppear(animated: Bool) {
+    decisionData = Datasource.ds.decisions
+    collection.reloadData()
   }
   
   func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
@@ -40,6 +45,20 @@ class DecisionListVC: UIViewController, UICollectionViewDelegate, UICollectionVi
       return cell
     }
     return DecisionCell()
+  }
+  
+  @IBAction func newDecisionTapped(sender: UIButton) {
+    self.newDecision = Decision(title: "", choices: [Choice]())
+    Datasource.ds.addNew(decision: newDecision!)
+    performSegueWithIdentifier("newDecisionSegue", sender: self)
+  }
+  
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if segue.identifier == "newDecisionSegue" {
+      if let destination = segue.destinationViewController as? AddDecisionVC {
+        destination.newDecision = self.newDecision!
+      }
+    }
   }
   
 }
