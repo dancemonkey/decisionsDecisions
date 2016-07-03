@@ -45,6 +45,9 @@
 		10B955B61D28B3DA00E14688 /* MappableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B955B41D28B3DA00E14688 /* MappableVC.swift */; };
 		10B955B71D28B3DA00E14688 /* MappableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B955B41D28B3DA00E14688 /* MappableVC.swift */; };
 		10CC16D01D1F7DC1000A412A /* Datasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CC16CF1D1F7DC1000A412A /* Datasource.swift */; };
+		10E618231D29C1D9009F9A49 /* AddCriteriaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E618221D29C1D9009F9A49 /* AddCriteriaVC.swift */; };
+		10E618241D29C1DB009F9A49 /* AddCriteriaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E618221D29C1D9009F9A49 /* AddCriteriaVC.swift */; };
+		10E618251D29C1DB009F9A49 /* AddCriteriaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E618221D29C1D9009F9A49 /* AddCriteriaVC.swift */; };
 		10ED1CB81D2629CC004CB49E /* IncludePhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ED1CB71D2629CC004CB49E /* IncludePhotoVC.swift */; };
 		10ED1CB91D2629CC004CB49E /* IncludePhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ED1CB71D2629CC004CB49E /* IncludePhotoVC.swift */; };
 		10ED1CBA1D2629CC004CB49E /* IncludePhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ED1CB71D2629CC004CB49E /* IncludePhotoVC.swift */; };
@@ -99,6 +102,7 @@
 		10AC2A941D1F895C00C273C7 /* DecisionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecisionCell.swift; sourceTree = "<group>"; };
 		10B955B41D28B3DA00E14688 /* MappableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MappableVC.swift; sourceTree = "<group>"; };
 		10CC16CF1D1F7DC1000A412A /* Datasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Datasource.swift; sourceTree = "<group>"; };
+		10E618221D29C1D9009F9A49 /* AddCriteriaVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCriteriaVC.swift; sourceTree = "<group>"; };
 		10ED1CB71D2629CC004CB49E /* IncludePhotoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncludePhotoVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -189,6 +193,7 @@
 				109F09021D20AE5D0034BC01 /* AddDecisionVC.swift */,
 				10ED1CB71D2629CC004CB49E /* IncludePhotoVC.swift */,
 				10B955B41D28B3DA00E14688 /* MappableVC.swift */,
+				10E618221D29C1D9009F9A49 /* AddCriteriaVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -378,6 +383,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				109F09031D20AE5D0034BC01 /* AddDecisionVC.swift in Sources */,
+				10E618231D29C1D9009F9A49 /* AddCriteriaVC.swift in Sources */,
 				102B569E1D1A3E7900165942 /* DecisionsDecisons.xcdatamodeld in Sources */,
 				109F09011D20ADE10034BC01 /* Extensions.swift in Sources */,
 				102B56C71D1B6EA000165942 /* Criterion.swift in Sources */,
@@ -399,6 +405,7 @@
 				102B56AE1D1A3E7A00165942 /* DecisionsDecisonsTests.swift in Sources */,
 				10AC2A7B1D1F861E00C273C7 /* Datasource.swift in Sources */,
 				102B56C81D1B6EAC00165942 /* Criterion.swift in Sources */,
+				10E618241D29C1DB009F9A49 /* AddCriteriaVC.swift in Sources */,
 				109F09041D20AE5D0034BC01 /* AddDecisionVC.swift in Sources */,
 				10AC2A961D1F895C00C273C7 /* DecisionCell.swift in Sources */,
 				10AC2A7D1D1F862200C273C7 /* DecisionListVC.swift in Sources */,
@@ -412,6 +419,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10E618251D29C1DB009F9A49 /* AddCriteriaVC.swift in Sources */,
 				102B56B91D1A3E7A00165942 /* DecisionsDecisonsUITests.swift in Sources */,
 				10AC2A7C1D1F861F00C273C7 /* Datasource.swift in Sources */,
 				102B56C91D1B6EAD00165942 /* Criterion.swift in Sources */,

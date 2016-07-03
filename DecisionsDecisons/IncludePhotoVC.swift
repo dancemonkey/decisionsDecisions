@@ -15,7 +15,7 @@ class IncludePhotoVC: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    print(newDecision.title, newDecision.includePhoto, newDecision.mappable)
+    self.title = newDecision.title
   }
   
   @IBAction func nextBtnTapped(sender: UIButton) {
