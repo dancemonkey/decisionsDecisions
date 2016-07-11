@@ -37,6 +37,7 @@ class DecisionListVC: UIViewController, UICollectionViewDelegate, UICollectionVi
   }
   
   func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    self.performSegueWithIdentifier("ChoiceList", sender: self)
   }
   
   func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -49,7 +50,7 @@ class DecisionListVC: UIViewController, UICollectionViewDelegate, UICollectionVi
   
   @IBAction func newDecisionTapped(sender: UIButton) {
     self.newDecision = Decision(title: "", choices: [Choice]())
-    Datasource.ds.addNew(decision: newDecision!)
+    //Datasource.ds.addNew(decision: newDecision!)
     performSegueWithIdentifier("newDecisionSegue", sender: self)
   }
   

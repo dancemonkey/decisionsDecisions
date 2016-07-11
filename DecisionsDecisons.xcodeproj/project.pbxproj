@@ -51,6 +51,8 @@
 		10ED1CB81D2629CC004CB49E /* IncludePhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ED1CB71D2629CC004CB49E /* IncludePhotoVC.swift */; };
 		10ED1CB91D2629CC004CB49E /* IncludePhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ED1CB71D2629CC004CB49E /* IncludePhotoVC.swift */; };
 		10ED1CBA1D2629CC004CB49E /* IncludePhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ED1CB71D2629CC004CB49E /* IncludePhotoVC.swift */; };
+		10EF6D021D3463CD0045E598 /* ChoiceListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EF6D011D3463CD0045E598 /* ChoiceListVC.swift */; };
+		10EF6D031D3463CD0045E598 /* ChoiceListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EF6D011D3463CD0045E598 /* ChoiceListVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +106,7 @@
 		10CC16CF1D1F7DC1000A412A /* Datasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Datasource.swift; sourceTree = "<group>"; };
 		10E618221D29C1D9009F9A49 /* AddCriteriaVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCriteriaVC.swift; sourceTree = "<group>"; };
 		10ED1CB71D2629CC004CB49E /* IncludePhotoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncludePhotoVC.swift; sourceTree = "<group>"; };
+		10EF6D011D3463CD0045E598 /* ChoiceListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceListVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +197,7 @@
 				10ED1CB71D2629CC004CB49E /* IncludePhotoVC.swift */,
 				10B955B41D28B3DA00E14688 /* MappableVC.swift */,
 				10E618221D29C1D9009F9A49 /* AddCriteriaVC.swift */,
+				10EF6D011D3463CD0045E598 /* ChoiceListVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -383,6 +387,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				109F09031D20AE5D0034BC01 /* AddDecisionVC.swift in Sources */,
+				10EF6D021D3463CD0045E598 /* ChoiceListVC.swift in Sources */,
 				10E618231D29C1D9009F9A49 /* AddCriteriaVC.swift in Sources */,
 				102B569E1D1A3E7900165942 /* DecisionsDecisons.xcdatamodeld in Sources */,
 				109F09011D20ADE10034BC01 /* Extensions.swift in Sources */,
@@ -406,6 +411,7 @@
 				10AC2A7B1D1F861E00C273C7 /* Datasource.swift in Sources */,
 				102B56C81D1B6EAC00165942 /* Criterion.swift in Sources */,
 				10E618241D29C1DB009F9A49 /* AddCriteriaVC.swift in Sources */,
+				10EF6D031D3463CD0045E598 /* ChoiceListVC.swift in Sources */,
 				109F09041D20AE5D0034BC01 /* AddDecisionVC.swift in Sources */,
 				10AC2A961D1F895C00C273C7 /* DecisionCell.swift in Sources */,
 				10AC2A7D1D1F862200C273C7 /* DecisionListVC.swift in Sources */,

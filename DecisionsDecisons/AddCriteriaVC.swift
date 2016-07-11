@@ -22,12 +22,14 @@ class AddCriteriaVC: UIViewController {
     self.title = newDecision.title
     addNewCritViewTopConstraint = NSLayoutConstraint(item: addNewCriteriaView, attribute: .Top, relatedBy: .Equal, toItem: criteriaTxtFld[currentCriteriaFld], attribute: .Bottom, multiplier: 1.0, constant: 8.0)
     addNewCritViewTopConstraint.active = true
+    criteriaTxtFld[currentCriteriaFld].becomeFirstResponder()
   }
   
   @IBAction func doneTapped(sender: UIButton) {
     for field in criteriaTxtFld {
       newDecision.baseCriteria.append(Criterion(title: field.text!))
     }
+    Datasource.ds.addNew(decision: newDecision!)
     self.navigationController?.popToRootViewControllerAnimated(true)
   }
   
@@ -35,6 +37,7 @@ class AddCriteriaVC: UIViewController {
     if criteriaTxtFld[currentCriteriaFld].text != "" && criteriaTxtFld[currentCriteriaFld].text != nil {
       currentCriteriaFld = currentCriteriaFld + 1
       criteriaTxtFld[currentCriteriaFld].hidden = false
+      criteriaTxtFld[currentCriteriaFld].becomeFirstResponder()
       
       if criteriaTxtFld[4].hidden == true {
         // reset top constraint on AddNewCriteria view
