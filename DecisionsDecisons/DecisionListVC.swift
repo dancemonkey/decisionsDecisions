@@ -14,6 +14,7 @@ class DecisionListVC: UIViewController, UICollectionViewDelegate, UICollectionVi
   
   var decisionData = Datasource.ds.decisions
   var newDecision: Decision?
+  var selectedCell: NSIndexPath!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -37,6 +38,7 @@ class DecisionListVC: UIViewController, UICollectionViewDelegate, UICollectionVi
   }
   
   func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    selectedCell = indexPath
     self.performSegueWithIdentifier("ChoiceList", sender: self)
   }
   
@@ -50,7 +52,6 @@ class DecisionListVC: UIViewController, UICollectionViewDelegate, UICollectionVi
   
   @IBAction func newDecisionTapped(sender: UIButton) {
     self.newDecision = Decision(title: "", choices: [Choice]())
-    //Datasource.ds.addNew(decision: newDecision!)
     performSegueWithIdentifier("newDecisionSegue", sender: self)
   }
   
@@ -58,6 +59,10 @@ class DecisionListVC: UIViewController, UICollectionViewDelegate, UICollectionVi
     if segue.identifier == "newDecisionSegue" {
       if let destination = segue.destinationViewController as? AddDecisionVC {
         destination.newDecision = self.newDecision!
+      }
+    } else if segue.identifier == "ChoiceList" {
+      if let destination = segue.destinationViewController as? ChoiceListVC {
+        destination.decision = decisionData[selectedCell.row]
       }
     }
   }
