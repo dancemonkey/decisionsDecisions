@@ -47,6 +47,7 @@
 		10B955B61D28B3DA00E14688 /* MappableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B955B41D28B3DA00E14688 /* MappableVC.swift */; };
 		10B955B71D28B3DA00E14688 /* MappableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B955B41D28B3DA00E14688 /* MappableVC.swift */; };
 		10CC16D01D1F7DC1000A412A /* Datasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CC16CF1D1F7DC1000A412A /* Datasource.swift */; };
+		10E51E0E1D443FFA0020E0DE /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E51E0D1D443FFA0020E0DE /* MaterialView.swift */; };
 		10E618231D29C1D9009F9A49 /* AddCriteriaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E618221D29C1D9009F9A49 /* AddCriteriaVC.swift */; };
 		10E618241D29C1DB009F9A49 /* AddCriteriaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E618221D29C1D9009F9A49 /* AddCriteriaVC.swift */; };
 		10E618251D29C1DB009F9A49 /* AddCriteriaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E618221D29C1D9009F9A49 /* AddCriteriaVC.swift */; };
@@ -107,6 +108,7 @@
 		10AC2A941D1F895C00C273C7 /* DecisionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecisionCell.swift; sourceTree = "<group>"; };
 		10B955B41D28B3DA00E14688 /* MappableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MappableVC.swift; sourceTree = "<group>"; };
 		10CC16CF1D1F7DC1000A412A /* Datasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Datasource.swift; sourceTree = "<group>"; };
+		10E51E0D1D443FFA0020E0DE /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		10E618221D29C1D9009F9A49 /* AddCriteriaVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCriteriaVC.swift; sourceTree = "<group>"; };
 		10ED1CB71D2629CC004CB49E /* IncludePhotoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncludePhotoVC.swift; sourceTree = "<group>"; };
 		10EF6D011D3463CD0045E598 /* ChoiceListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceListVC.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 				102B56991D1A3E7900165942 /* Main.storyboard */,
 				10AC2A941D1F895C00C273C7 /* DecisionCell.swift */,
 				109B20481D41AC76006F890D /* ChoiceCell.swift */,
+				10E51E0D1D443FFA0020E0DE /* MaterialView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 				109F09011D20ADE10034BC01 /* Extensions.swift in Sources */,
 				102B56C71D1B6EA000165942 /* Criterion.swift in Sources */,
 				105E67AE1D2072FE003AC6F0 /* Choice.swift in Sources */,
+				10E51E0E1D443FFA0020E0DE /* MaterialView.swift in Sources */,
 				102B56981D1A3E7900165942 /* DecisionListVC.swift in Sources */,
 				10ED1CB81D2629CC004CB49E /* IncludePhotoVC.swift in Sources */,
 				10AC2A951D1F895C00C273C7 /* DecisionCell.swift in Sources */,

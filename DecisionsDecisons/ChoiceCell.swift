@@ -17,6 +17,8 @@ class ChoiceCell: UITableViewCell {
   @IBOutlet weak var ratingImg: UIImageView!
   @IBOutlet weak var ratingImgWidth: NSLayoutConstraint!
   
+  let deviceScale = UIScreen.mainScreen().scale
+  
   override func awakeFromNib() {
     super.awakeFromNib()
     // Initialization code
@@ -37,11 +39,15 @@ class ChoiceCell: UITableViewCell {
     self.title.text = choice.title
     self.favImg.image = UIImage(named: "FavEmpty")
     
-    // clean up to remove magic numbers and have width.constant pull from choice average rating
+    // currently only displays properly on device scale of 2x
+    
     let originalImg = UIImage(named: "5 Stars")
-    let ref: CGImageRef = CGImageCreateWithImageInRect(originalImg?.CGImage, CGRect(x: 0, y: 0, width: 300, height: 70))!
+    let imgWidth = ratingImg.frame.width * deviceScale
+    let ratingPct:CGFloat = CGFloat(choice.returnRatingPct())
+    let rect = CGRect(x: 0, y: 0, width: imgWidth*ratingPct, height: 70)
+    let ref: CGImageRef = CGImageCreateWithImageInRect(originalImg?.CGImage, rect)!
     self.ratingImg.image = UIImage(CGImage: ref)
-    self.ratingImgWidth.constant = 150
+    self.ratingImgWidth.constant = rect.width/deviceScale
     self.ratingImg.contentMode = .ScaleAspectFill
   }
   

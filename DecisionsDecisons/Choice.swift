@@ -57,6 +57,10 @@ class Choice {
     return sum
   }
   
+  func returnRatingPct() -> Float {
+    return self.returnAverageRating()/5.0
+  }
+  
   func setCriteria(with criteria: [Criterion]) {
     self._criteria = criteria
   }
