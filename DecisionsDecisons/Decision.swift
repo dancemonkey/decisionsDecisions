@@ -22,6 +22,12 @@ class Decision {
     self.baseCriteria = [Criterion]()
   }
   
+  init(title: String) {
+    self.title = title
+    self.choices = [Choice]()
+    self.baseCriteria = [Criterion]()
+  }
+  
   init(title: String, mappable: Bool, includePhoto: Bool, choices: [Choice], criteria: [Criterion]) {
     self.title = title
     self.choices = choices

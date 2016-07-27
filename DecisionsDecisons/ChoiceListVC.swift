@@ -13,6 +13,7 @@ class ChoiceListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
   @IBOutlet weak var tableView: UITableView!
   
   weak var decision: Decision!
+  var newChoice: Choice?
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -46,14 +47,17 @@ class ChoiceListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
   }
   
   
-  /*
-   // MARK: - Navigation
-   
-   // In a storyboard-based application, you will often want to do a little preparation before navigation
-   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-   // Get the new view controller using segue.destinationViewController.
-   // Pass the selected object to the new view controller.
-   }
-   */
+  @IBAction func newChoiceTapped(sender: UIButton) {
+    self.newChoice = Choice(title: "")
+    performSegueWithIdentifier("newChoiceSegue", sender: self)
+  }
+  
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if segue.identifier == "newChoiceSegue" {
+      if let destVC = segue.destinationViewController as? AddChoiceVC {
+        destVC.newChoice = self.newChoice
+      }
+    }
+  }
   
 }

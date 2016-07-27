@@ -12,6 +12,7 @@ class AddCriteriaVC: UIViewController {
     
   @IBOutlet var criteriaTxtFld: [UITextField]!
   @IBOutlet weak var addNewCriteriaView: UIView!
+  @IBOutlet weak var shadowView: UIView!
   var addNewCritViewTopConstraint: NSLayoutConstraint!
   
   weak var newDecision: Decision!
@@ -34,7 +35,9 @@ class AddCriteriaVC: UIViewController {
   }
   
   @IBAction func addNewCriteriaTapped(sender: UIButton) {
+    
     if criteriaTxtFld[currentCriteriaFld].text != "" && criteriaTxtFld[currentCriteriaFld].text != nil {
+
       currentCriteriaFld = currentCriteriaFld + 1
       criteriaTxtFld[currentCriteriaFld].hidden = false
       criteriaTxtFld[currentCriteriaFld].becomeFirstResponder()
@@ -49,6 +52,7 @@ class AddCriteriaVC: UIViewController {
         addNewCriteriaView.hidden = true
       }
     }
+    
   }
   
 }

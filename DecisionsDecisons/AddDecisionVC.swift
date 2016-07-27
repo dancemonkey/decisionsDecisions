@@ -19,6 +19,7 @@ class AddDecisionVC: UIViewController {
     self.hideKeyboardWhenTappedAround()
     
     self.nextButton.enabled = false
+    decisionNameTxtFld.becomeFirstResponder()
   }
   
   @IBAction func nextBtnTapped(sender: UIButton) {
