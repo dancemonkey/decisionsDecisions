@@ -19,7 +19,27 @@ class AddChoiceVC: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     choiceTitleFld.becomeFirstResponder()
-    // Do any additional setup after loading the view.
+    self.nextButton.enabled = false
+  }
+  
+  @IBAction func nextBtnTapped(sender: UIButton) {
+    self.newChoice = Choice(title: "\(choiceTitleFld.text)")
+    performSegueWithIdentifier("nextStep", sender: self)
+  }
+  
+  @IBAction func textFieldChanged(sender: UITextField) {
+    if sender.text != nil && sender.text != "" {
+      self.nextButton.enabled = true
+    } else {
+      self.nextButton.enabled = false
+    }
+  }
+  
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if segue.identifier == "nextStep" {
+      // pass newDecision to next step in the chain
+      print(self.newChoice!.title)
+    }
   }
   
 }

@@ -13,13 +13,13 @@ class AddDecisionVC: UIViewController {
   @IBOutlet weak var decisionNameTxtFld: UITextField!
   @IBOutlet weak var nextButton: UIButton!
   var newDecision: Decision?
+  var kbHeight: CGFloat!
   
   override func viewDidLoad() {
     super.viewDidLoad()
     self.hideKeyboardWhenTappedAround()
     
     self.nextButton.enabled = false
-    decisionNameTxtFld.becomeFirstResponder()
   }
   
   @IBAction func nextBtnTapped(sender: UIButton) {
@@ -38,7 +38,7 @@ class AddDecisionVC: UIViewController {
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     if segue.identifier == "nextStep" {
       // pass newDecision to next step in the chain
-      if let nextVC = segue.destinationViewController as? IncludePhotoVC {
+      if let nextVC = segue.destinationViewController as? AddCriteriaVC {
         nextVC.newDecision = self.newDecision
       }
     }

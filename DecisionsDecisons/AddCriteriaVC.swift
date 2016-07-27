@@ -26,8 +26,9 @@ class AddCriteriaVC: UIViewController {
     criteriaTxtFld[currentCriteriaFld].becomeFirstResponder()
   }
   
+  //TODO: eventually test whether at least one field has a criteria in it
   @IBAction func doneTapped(sender: UIButton) {
-    for field in criteriaTxtFld {
+    for field in criteriaTxtFld where field != "" {
       newDecision.baseCriteria.append(Criterion(title: field.text!))
     }
     Datasource.ds.addNew(decision: newDecision!)
