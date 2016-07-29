@@ -15,9 +15,9 @@ class Choice {
     return _title
   }
   
-  private var _description: String?       // add this to onboarding or just enter afterwards?
-  var description: String? {
-    return _description
+  private var _details: String?       // add this to onboarding or just enter afterwards?
+  var details: String? {
+    return _details
   }
   
   private var _criteria = [Criterion]()   // entered via onboarding of this DecisionOption
@@ -79,8 +79,8 @@ class Choice {
     self._address = address
   }
   
-  func setDescription(to desc: String) {
-    self._description = desc
+  func setDetails(to details: String) {
+    self._details = details
   }
   
   func setImage(url url: String) {
