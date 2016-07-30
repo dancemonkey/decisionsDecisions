@@ -36,6 +36,9 @@
 		109F09011D20ADE10034BC01 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109F09001D20ADE10034BC01 /* Extensions.swift */; };
 		109F09031D20AE5D0034BC01 /* AddDecisionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109F09021D20AE5D0034BC01 /* AddDecisionVC.swift */; };
 		109F09041D20AE5D0034BC01 /* AddDecisionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109F09021D20AE5D0034BC01 /* AddDecisionVC.swift */; };
+		10A5A0C71D4D6F4400479E36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102B56951D1A3E7900165942 /* AppDelegate.swift */; };
+		10A5A0C81D4D6F6800479E36 /* Choice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1045E9A01D4CFF3F00BB49C3 /* Choice.swift */; };
+		10A5A0C91D4D6FA700479E36 /* AddChoiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1065FAB81D45A1E700D1B994 /* AddChoiceVC.swift */; };
 		10AC2A7B1D1F861E00C273C7 /* Datasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CC16CF1D1F7DC1000A412A /* Datasource.swift */; };
 		10AC2A7C1D1F861F00C273C7 /* Datasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CC16CF1D1F7DC1000A412A /* Datasource.swift */; };
 		10AC2A7D1D1F862200C273C7 /* DecisionListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102B56971D1A3E7900165942 /* DecisionListVC.swift */; };
@@ -448,11 +451,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10A5A0C71D4D6F4400479E36 /* AppDelegate.swift in Sources */,
 				102B56AE1D1A3E7A00165942 /* DecisionsDecisonsTests.swift in Sources */,
 				10AC2A7B1D1F861E00C273C7 /* Datasource.swift in Sources */,
 				109B204A1D41AC76006F890D /* ChoiceCell.swift in Sources */,
+				10A5A0C91D4D6FA700479E36 /* AddChoiceVC.swift in Sources */,
 				102B56C81D1B6EAC00165942 /* _Criterion.swift in Sources */,
 				10E618241D29C1DB009F9A49 /* AddCriteriaVC.swift in Sources */,
+				10A5A0C81D4D6F6800479E36 /* Choice.swift in Sources */,
 				10EF6D031D3463CD0045E598 /* ChoiceListVC.swift in Sources */,
 				109F09041D20AE5D0034BC01 /* AddDecisionVC.swift in Sources */,
 				10AC2A961D1F895C00C273C7 /* DecisionCell.swift in Sources */,

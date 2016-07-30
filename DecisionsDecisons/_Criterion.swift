@@ -12,7 +12,7 @@ enum Rating: Int {
   case notRated = 0, oneStar, twoStar, threeStar, fourStar, fiveStar
 }
 
-class Criterion {
+class _Criterion {
   
   private var _title: String                    // only value NEEDED when creating criterion
   var title: String {

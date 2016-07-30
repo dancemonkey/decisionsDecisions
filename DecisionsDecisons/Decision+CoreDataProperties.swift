@@ -18,6 +18,6 @@ extension Decision {
     @NSManaged var mappable: NSNumber?
     @NSManaged var title: String?
     @NSManaged var baseCriteria: NSSet?
-    @NSManaged var choice: NSSet?
+    @NSManaged var choices: NSSet?
 
 }

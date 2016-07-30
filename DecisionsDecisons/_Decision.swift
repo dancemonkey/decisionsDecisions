@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Decision {
+class _Decision {
   
   var title: String
   var mappable: Bool = false

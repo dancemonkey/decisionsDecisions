@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Choice {
+class _Choice {
   
   private var _title: String              // only value NEEDED when creating this DecisionOption
   var title: String {

@@ -6,7 +6,7 @@
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="value" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <relationship name="criteria" optional="YES" toMany="YES" minCount="1" maxCount="5" deletionRule="Nullify" destinationEntity="Criterion" inverseName="choice" inverseEntity="Criterion" syncable="YES"/>
-        <relationship name="decision" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Decision" inverseName="choice" inverseEntity="Decision" syncable="YES"/>
+        <relationship name="decision" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Decision" inverseName="choices" inverseEntity="Decision" syncable="YES"/>
         <relationship name="image" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Image" inverseName="choice" inverseEntity="Image" syncable="YES"/>
     </entity>
     <entity name="Criterion" representedClassName=".Criterion" syncable="YES">
@@ -21,7 +21,7 @@
         <attribute name="mappable" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="baseCriteria" optional="YES" toMany="YES" minCount="1" maxCount="5" deletionRule="Nullify" destinationEntity="Criterion" inverseName="decision" inverseEntity="Criterion" syncable="YES"/>
-        <relationship name="choice" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Choice" inverseName="decision" inverseEntity="Choice" syncable="YES"/>
+        <relationship name="choices" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Choice" inverseName="decision" inverseEntity="Choice" syncable="YES"/>
     </entity>
     <entity name="Image" representedClassName=".Image" syncable="YES">
         <attribute name="image" optional="YES" attributeType="Transformable" syncable="YES"/>

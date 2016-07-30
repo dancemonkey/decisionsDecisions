@@ -12,6 +12,12 @@ import CoreData
 
 class Decision: NSManagedObject {
 
-// Insert code here to add functionality to your managed object subclass
+//  var title: String
+//  var mappable: Bool = false
+//  var includePhoto: Bool = false
+//  var choices = [Choice]()
+//  var baseCriteria: [Criterion]
+  
+  
 
 }
