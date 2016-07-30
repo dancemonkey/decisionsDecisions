@@ -1,5 +1,5 @@
 //
-//  Criterion.swift
+//  Image.swift
 //  DecisionsDecisons
 //
 //  Created by Drew Lanning on 7/30/16.
@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 
 
-class Criterion: NSManagedObject {
+class Image: NSManagedObject {
 
 // Insert code here to add functionality to your managed object subclass
 

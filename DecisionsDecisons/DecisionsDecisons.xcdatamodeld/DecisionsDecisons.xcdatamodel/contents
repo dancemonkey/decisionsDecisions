@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15F34" minimumToolsVersion="Automatic">
-    <entity name="Choice" syncable="YES">
+    <entity name="Choice" representedClassName=".Choice" syncable="YES">
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="details" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
@@ -9,21 +9,21 @@
         <relationship name="decision" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Decision" inverseName="choice" inverseEntity="Decision" syncable="YES"/>
         <relationship name="image" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Image" inverseName="choice" inverseEntity="Image" syncable="YES"/>
     </entity>
-    <entity name="Criterion" syncable="YES">
+    <entity name="Criterion" representedClassName=".Criterion" syncable="YES">
         <attribute name="rating" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="weight" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <relationship name="choice" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Choice" inverseName="criteria" inverseEntity="Choice" syncable="YES"/>
         <relationship name="decision" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Decision" inverseName="baseCriteria" inverseEntity="Decision" syncable="YES"/>
     </entity>
-    <entity name="Decision" syncable="YES">
+    <entity name="Decision" representedClassName=".Decision" syncable="YES">
         <attribute name="includePhoto" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="mappable" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="baseCriteria" optional="YES" toMany="YES" minCount="1" maxCount="5" deletionRule="Nullify" destinationEntity="Criterion" inverseName="decision" inverseEntity="Criterion" syncable="YES"/>
         <relationship name="choice" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Choice" inverseName="decision" inverseEntity="Choice" syncable="YES"/>
     </entity>
-    <entity name="Image" syncable="YES">
+    <entity name="Image" representedClassName=".Image" syncable="YES">
         <attribute name="image" optional="YES" attributeType="Transformable" syncable="YES"/>
         <relationship name="choice" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Choice" inverseName="image" inverseEntity="Choice" syncable="YES"/>
     </entity>
@@ -31,6 +31,6 @@
         <element name="Choice" positionX="259" positionY="261" width="128" height="148"/>
         <element name="Criterion" positionX="295" positionY="-63" width="128" height="118"/>
         <element name="Decision" positionX="-54" positionY="18" width="128" height="118"/>
-        <element name="Image" positionX="-72" positionY="405" width="128" height="75"/>
+        <element name="Image" positionX="-72" positionY="405" width="128" height="73"/>
     </elements>
 </model>
