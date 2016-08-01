@@ -15,12 +15,14 @@ class DecisionCell: UICollectionViewCell {
   
   func configCell(withDecision decision: Decision) {
     self.titleLabel.text = decision.title
-    self.countLabel.text = "\(decision.choices.count) Choices"
-    
-    if let img = decision.choices.first?.imgURL {
-      self.image.image = UIImage(contentsOfFile: img)
-    } else {
-      self.image.image = UIImage(named: "defaultDecImg")
+    if let choices = decision.choices {
+      self.countLabel.text = "\(choices.count) Choices"
+      if let img = (Array(choices).first as? Choice)?.image?.image {
+        self.image.image = UIImage(data: img)
+      } else {
+        self.image.image = UIImage(named: "defaultDecImg")
+      }
     }
+
   }
 }

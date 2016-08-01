@@ -7,14 +7,17 @@
 //
 
 import UIKit
+import CoreData
 
-class DecisionListVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class DecisionListVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, NSFetchedResultsControllerDelegate {
   
   @IBOutlet weak var collection: UICollectionView!
   
   var decisionData = Datasource.ds.decisions
-  var newDecision: Decision?
+  var newDecision: NSManagedObject?
   var selectedCell: NSIndexPath!
+  
+  var fetchedResultsController: NSFetchedResultsController!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -50,18 +53,24 @@ class DecisionListVC: UIViewController, UICollectionViewDelegate, UICollectionVi
   }
   
   @IBAction func newDecisionTapped(sender: UIButton) {
-    self.newDecision = Decision(title: "", choices: [Choice]())
+    if let nd = NSEntityDescription.entityForName("Decision", inManagedObjectContext: appDel.managedObjectContext) {
+      self.newDecision = NSManagedObject(entity: nd, insertIntoManagedObjectContext: appDel.managedObjectContext)
+      // if this is inserted then does that mean it will remain there until I save or remove it? I think yes?
+      // see what homey did in the Core Data video to handle this
+    }
     performSegueWithIdentifier("newDecisionSegue", sender: self)
   }
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     if segue.identifier == "newDecisionSegue" {
       if let destination = segue.destinationViewController as? AddDecisionVC {
-        destination.newDecision = self.newDecision!
+        // don't need this right? since I've inserted the newDecision into the context?
+        // destination.newDecision = self.newDecision!
       }
     } else if segue.identifier == "ChoiceList" {
       if let destination = segue.destinationViewController as? ChoiceListVC {
-        destination.decision = decisionData[selectedCell.row]
+        // same here, choiceListVC is reading right from CoreData
+        // destination.decision = decisionData[selectedCell.row]
       }
     }
   }

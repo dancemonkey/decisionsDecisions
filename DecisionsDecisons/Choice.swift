@@ -11,7 +11,23 @@ import CoreData
 
 
 class Choice: NSManagedObject {
-
-// Insert code here to add functionality to your managed object subclass
-
+  
+  // Insert code here to add functionality to your managed object subclass
+  
+  func returnAverageRating() -> Float {
+    var sum: Float = 0
+    if let criteria = self.criteria {
+      for criterion in criteria {
+        sum = sum + (criterion as? Criterion)!.returnWeightedRating()!
+      }
+    }
+    return sum
+  }
+  
+  func returnRatingPct() -> Float {
+    return self.returnAverageRating()/5.0
+  }
+  
+  
+  
 }

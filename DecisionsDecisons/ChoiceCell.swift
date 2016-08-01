@@ -31,11 +31,12 @@ class ChoiceCell: UITableViewCell {
   }
   
   func configureCell(withChoice choice: Choice) {
-    if let imgURL = choice.imgURL where imgURL != "" {
-      self.thumb.image = UIImage(named: imgURL)
+    if let image = choice.image?.image {
+      self.thumb.image = UIImage(data: image)
     } else {
       self.thumb.image = UIImage(named: "defaultDecImg")
     }
+    
     self.title.text = choice.title
     self.favImg.image = UIImage(named: "FavEmpty")
     

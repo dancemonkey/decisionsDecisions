@@ -23,6 +23,12 @@ class ChoiceListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     tableView.delegate = self
   }
   
+  override func viewDidAppear(animated: Bool) {
+    super.viewDidAppear(animated)
+    
+    attemptFetch()
+  }
+  
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
   }

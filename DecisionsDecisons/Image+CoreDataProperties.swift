@@ -2,7 +2,7 @@
 //  Image+CoreDataProperties.swift
 //  DecisionsDecisons
 //
-//  Created by Drew Lanning on 7/30/16.
+//  Created by Drew Lanning on 7/31/16.
 //  Copyright © 2016 Drew Lanning. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -14,7 +14,7 @@ import CoreData
 
 extension Image {
 
-    @NSManaged var image: NSObject?
+    @NSManaged var image: NSData?
     @NSManaged var choice: Choice?
 
 }
