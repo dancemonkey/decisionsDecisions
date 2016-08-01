@@ -17,7 +17,7 @@ class DecisionCell: UICollectionViewCell {
     self.titleLabel.text = decision.title
     if let choices = decision.choices {
       self.countLabel.text = "\(choices.count) Choices"
-      if let img = (Array(choices).first as? Choice)?.image?.image {
+      if let img = (Array(choices).first as? Choice)?.image {
         self.image.image = UIImage(data: img)
       } else {
         self.image.image = UIImage(named: "defaultDecImg")

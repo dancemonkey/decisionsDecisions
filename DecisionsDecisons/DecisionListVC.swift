@@ -14,7 +14,7 @@ class DecisionListVC: UIViewController, UICollectionViewDelegate, UICollectionVi
   @IBOutlet weak var collection: UICollectionView!
   
   var decisionData = Datasource.ds.decisions
-  var newDecision: NSManagedObject?
+  var newDecision: Decision?
   var selectedCell: NSIndexPath!
   
   var fetchedResultsController: NSFetchedResultsController!
@@ -54,7 +54,7 @@ class DecisionListVC: UIViewController, UICollectionViewDelegate, UICollectionVi
   
   @IBAction func newDecisionTapped(sender: UIButton) {
     if let nd = NSEntityDescription.entityForName("Decision", inManagedObjectContext: appDel.managedObjectContext) {
-      self.newDecision = NSManagedObject(entity: nd, insertIntoManagedObjectContext: appDel.managedObjectContext)
+      self.newDecision = NSManagedObject(entity: nd, insertIntoManagedObjectContext: appDel.managedObjectContext) as? Decision
       // if this is inserted then does that mean it will remain there until I save or remove it? I think yes?
       // see what homey did in the Core Data video to handle this
     }
@@ -66,6 +66,7 @@ class DecisionListVC: UIViewController, UICollectionViewDelegate, UICollectionVi
       if let destination = segue.destinationViewController as? AddDecisionVC {
         // don't need this right? since I've inserted the newDecision into the context?
         // destination.newDecision = self.newDecision!
+        destination.newDecision = self.newDecision
       }
     } else if segue.identifier == "ChoiceList" {
       if let destination = segue.destinationViewController as? ChoiceListVC {

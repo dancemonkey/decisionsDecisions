@@ -20,6 +20,6 @@ extension Choice {
     @NSManaged var value: NSNumber?
     @NSManaged var criteria: NSSet?
     @NSManaged var decision: Decision?
-    @NSManaged var image: Image?
+    @NSManaged var image: NSData?
 
 }

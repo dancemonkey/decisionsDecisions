@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class AddChoiceVC: UIViewController {
   
@@ -23,8 +24,10 @@ class AddChoiceVC: UIViewController {
   }
   
   @IBAction func nextBtnTapped(sender: UIButton) {
-    self.newChoice = Choice(title: "\(choiceTitleFld.text)")
-    performSegueWithIdentifier("nextStep", sender: self)
+    if let newChoice = NSEntityDescription.insertNewObjectForEntityForName("Choice", inManagedObjectContext: appDel.managedObjectContext) as? Choice {
+      newChoice.title = choiceTitleFld.text
+      performSegueWithIdentifier("nextStep", sender: self)
+    }
   }
   
   @IBAction func textFieldChanged(sender: UITextField) {

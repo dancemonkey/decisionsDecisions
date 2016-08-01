@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class AddCriteriaVC: UIViewController {
     
@@ -28,10 +29,23 @@ class AddCriteriaVC: UIViewController {
   
   //TODO: eventually test whether at least one field has a criteria in it
   @IBAction func doneTapped(sender: UIButton) {
+    var criteria = Set<Criterion>()
     for field in criteriaTxtFld where field != "" {
-      newDecision.baseCriteria.append(Criterion(title: field.text!))
+      if let criterion = NSEntityDescription.insertNewObjectForEntityForName("Criterion", inManagedObjectContext: appDel.managedObjectContext) as? Criterion {
+        criterion.title = field.text
+        criteria.insert(criterion)
+      }
     }
-    Datasource.ds.addNew(decision: newDecision!)
+    
+    newDecision.baseCriteria = NSSet(set: criteria)
+    
+    appDel.managedObjectContext.insertObject(newDecision)
+    do {
+      try appDel.managedObjectContext.save()
+    } catch {
+      print("\(error)")
+    }
+    
     self.navigationController?.popToRootViewControllerAnimated(true)
   }
   

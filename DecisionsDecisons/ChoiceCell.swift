@@ -31,7 +31,7 @@ class ChoiceCell: UITableViewCell {
   }
   
   func configureCell(withChoice choice: Choice) {
-    if let image = choice.image?.image {
+    if let image = choice.image {
       self.thumb.image = UIImage(data: image)
     } else {
       self.thumb.image = UIImage(named: "defaultDecImg")

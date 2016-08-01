@@ -22,5 +22,10 @@ class Criterion: NSManagedObject {
       return nil
     }
   }
+  
+  func setWeight(to weight: Float) {
+    self.weight = weight
+  }
+
 
 }
