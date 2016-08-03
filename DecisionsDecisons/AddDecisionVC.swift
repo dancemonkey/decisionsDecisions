@@ -13,36 +13,38 @@ class AddDecisionVC: UIViewController {
   
   @IBOutlet weak var decisionNameTxtFld: UITextField!
   @IBOutlet weak var nextButton: UIButton!
-  var newDecision: Decision?
+  var newDecision: Decision? = nil
   var kbHeight: CGFloat!
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    decisionNameTxtFld.becomeFirstResponder()
     self.hideKeyboardWhenTappedAround()
-    
-    self.nextButton.enabled = false
   }
   
   @IBAction func nextBtnTapped(sender: UIButton) {
-    self.newDecision?.title = decisionNameTxtFld.text!
-    performSegueWithIdentifier("nextStep", sender: self)
-  }
-  
-  @IBAction func textFieldChanged(sender: UITextField) {
-    if sender.text != nil && sender.text != "" {
-      self.nextButton.enabled = true
-    } else {
-      self.nextButton.enabled = false
-    }
-  }
-  
-  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    if segue.identifier == "nextStep" {
-      // pass newDecision to next step in the chain
-      if let nextVC = segue.destinationViewController as? AddCriteriaVC {
-        nextVC.newDecision = self.newDecision
+    if let title = decisionNameTxtFld.text where title != "" {
+      if let nd = NSEntityDescription.entityForName("Decision", inManagedObjectContext: appDel.managedObjectContext) {
+        self.newDecision = NSManagedObject(entity: nd, insertIntoManagedObjectContext: appDel.managedObjectContext) as? Decision
+      }
+        newDecision?.title = title
+        performSegueWithIdentifier("nextStep", sender: self)
+      } else {
+        decisionNameTxtFld.backgroundColor = UIColor.redColor()
       }
     }
-  }
-
+    
+    @IBAction func textFieldChanged(sender: UITextField) {
+      
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+      if segue.identifier == "nextStep" {
+        // pass newDecision to next step in the chain
+        if let nextVC = segue.destinationViewController as? AddCriteriaVC {
+          nextVC.newDecision = self.newDecision
+        }
+      }
+    }
+    
 }

@@ -25,14 +25,18 @@ class AddChoiceVC: UIViewController {
   }
   
   @IBAction func nextBtnTapped(sender: UIButton) {
-    newChoice.title = choiceTitleFld.text
-    if let value = valueFld.text {
-      // test for being a number and assign to newChoice.number
+    if let title = newChoice.title {
+      newChoice.title = title
+      if let valueStr = valueFld.text, let valueNum = Int(valueStr) {
+        newChoice.value = valueNum
+      }
+      if let location = locationFld.text {
+        newChoice.address = location
+      }
+      performSegueWithIdentifier("nextStep", sender: self)
+    } else {
+      choiceTitleFld.backgroundColor = UIColor.redColor()
     }
-    if let location = locationFld.text {
-      newChoice.address = location
-    }
-    performSegueWithIdentifier("nextStep", sender: self)
   }
   
   @IBAction func textFieldChanged(sender: UITextField) {

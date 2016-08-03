@@ -46,7 +46,6 @@
 		10A5A0C91D4D6FA700479E36 /* AddChoiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1065FAB81D45A1E700D1B994 /* AddChoiceVC.swift */; };
 		10AC2A7B1D1F861E00C273C7 /* Datasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CC16CF1D1F7DC1000A412A /* Datasource.swift */; };
 		10AC2A7D1D1F862200C273C7 /* DecisionListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102B56971D1A3E7900165942 /* DecisionListVC.swift */; };
-		10AC2A7E1D1F862300C273C7 /* DecisionListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102B56971D1A3E7900165942 /* DecisionListVC.swift */; };
 		10AC2A8B1D1F892800C273C7 /* SF-UI-Display-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 10AC2A821D1F892800C273C7 /* SF-UI-Display-Black.otf */; };
 		10AC2A8C1D1F892800C273C7 /* SF-UI-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 10AC2A831D1F892800C273C7 /* SF-UI-Display-Bold.otf */; };
 		10AC2A8D1D1F892800C273C7 /* SF-UI-Display-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 10AC2A841D1F892800C273C7 /* SF-UI-Display-Heavy.otf */; };
@@ -474,7 +473,6 @@
 			files = (
 				102B56B91D1A3E7A00165942 /* DecisionsDecisonsUITests.swift in Sources */,
 				102B56C91D1B6EAD00165942 /* _Criterion.swift in Sources */,
-				10AC2A7E1D1F862300C273C7 /* DecisionListVC.swift in Sources */,
 				102B56D41D1B744E00165942 /* _Decision.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
