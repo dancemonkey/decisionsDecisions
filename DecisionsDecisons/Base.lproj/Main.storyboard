@@ -680,6 +680,7 @@
                     </view>
                     <connections>
                         <outlet property="choiceTitleFld" destination="J2C-nO-VV2" id="ibg-gy-zq9"/>
+                        <outlet property="locationFld" destination="Z6v-7V-njR" id="e6S-VI-aG8"/>
                         <outlet property="nextButton" destination="wMi-3k-7ms" id="jNm-Wu-iec"/>
                         <outlet property="valueFld" destination="Sec-MM-qf0" id="qdf-I4-3ts"/>
                         <segue destination="c5m-Rn-7zP" kind="show" identifier="nextStep" id="7fv-vX-dQt"/>

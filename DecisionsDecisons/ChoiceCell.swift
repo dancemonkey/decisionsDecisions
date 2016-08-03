@@ -45,7 +45,8 @@ class ChoiceCell: UITableViewCell {
     let originalImg = UIImage(named: "5 Stars")
     let imgWidth = ratingImg.frame.width * deviceScale
     let ratingPct:CGFloat = CGFloat(choice.returnRatingPct())
-    let rect = CGRect(x: 0, y: 0, width: imgWidth*ratingPct, height: 70)
+    let ratingMultiplier = ratingPct > 0 ? ratingPct : 1
+    let rect = CGRect(x: 0, y: 0, width: imgWidth*ratingMultiplier, height: 70)
     let ref: CGImageRef = CGImageCreateWithImageInRect(originalImg?.CGImage, rect)!
     self.ratingImg.image = UIImage(CGImage: ref)
     self.ratingImgWidth.constant = rect.width/deviceScale

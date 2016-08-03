@@ -11,10 +11,11 @@ import CoreData
 
 class AddChoiceVC: UIViewController {
   
-  var newChoice: Choice?
+  var newChoice: Choice!
   
   @IBOutlet weak var choiceTitleFld: UITextField!
   @IBOutlet weak var valueFld: UITextField!
+  @IBOutlet weak var locationFld: UITextField!
   @IBOutlet weak var nextButton: UIButton!
   
   override func viewDidLoad() {
@@ -24,10 +25,14 @@ class AddChoiceVC: UIViewController {
   }
   
   @IBAction func nextBtnTapped(sender: UIButton) {
-    if let newChoice = NSEntityDescription.insertNewObjectForEntityForName("Choice", inManagedObjectContext: appDel.managedObjectContext) as? Choice {
-      newChoice.title = choiceTitleFld.text
-      performSegueWithIdentifier("nextStep", sender: self)
+    newChoice.title = choiceTitleFld.text
+    if let value = valueFld.text {
+      // test for being a number and assign to newChoice.number
     }
+    if let location = locationFld.text {
+      newChoice.address = location
+    }
+    performSegueWithIdentifier("nextStep", sender: self)
   }
   
   @IBAction func textFieldChanged(sender: UITextField) {
@@ -41,7 +46,6 @@ class AddChoiceVC: UIViewController {
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     if segue.identifier == "nextStep" {
       // pass newDecision to next step in the chain
-      print(self.newChoice!.title)
     }
   }
   

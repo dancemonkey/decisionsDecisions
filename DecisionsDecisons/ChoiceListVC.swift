@@ -13,19 +13,19 @@ class ChoiceListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
   
   @IBOutlet weak var tableView: UITableView!
   
-  //  weak var decision: Decision!
-  //  var newChoice: Choice?
   var fetchedResultsController: NSFetchedResultsController!
+  var decisionTitle: String!
+  var newChoice: Choice!
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    attemptFetch()
     tableView.dataSource = self
     tableView.delegate = self
   }
   
   override func viewDidAppear(animated: Bool) {
     super.viewDidAppear(animated)
-    
     attemptFetch()
   }
   
@@ -39,9 +39,8 @@ class ChoiceListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
   
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     
-    if let choices = fetchedResultsController.fetchedObjects {
-      let choiceInfo = choices[0]
-      return choiceInfo.numberOfObjects
+    if let choices = fetchedResultsController.fetchedObjects as? [Choice] {
+      return choices.count
     }
     
     return 0
@@ -50,7 +49,7 @@ class ChoiceListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     
-    let cell = tableView.dequeueReusableCellWithIdentifier("ChoiceCell", forIndexPath: indexPath) as! ChoiceCell
+    let cell = tableView.dequeueReusableCellWithIdentifier("choiceCell", forIndexPath: indexPath) as! ChoiceCell
     configureCell(cell, indexPath: indexPath)
     return cell
     
@@ -79,23 +78,25 @@ class ChoiceListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
   
   func setFetchedResults() {
     let fetchRequest = NSFetchRequest(entityName: "Choice")
-    let sortDescriptor = NSSortDescriptor(key: "Title", ascending: true)
+    let predicate = NSPredicate(format: "decision.title == %@", "\(self.decisionTitle)")
+    let sortDescriptor = NSSortDescriptor(key: "title", ascending: true)
     fetchRequest.sortDescriptors = [sortDescriptor]
-    let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: appDel.managedObjectContext, sectionNameKeyPath: "Section", cacheName: nil)
+    fetchRequest.predicate = predicate
+    let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: appDel.managedObjectContext, sectionNameKeyPath: "title", cacheName: nil)
     controller.delegate = self
     fetchedResultsController = controller
   }
   
   
   @IBAction func newChoiceTapped(sender: UIButton) {
-    let newChoice = NSEntityDescription.insertNewObjectForEntityForName("Choices", inManagedObjectContext: appDel.managedObjectContext) as? Choice
+    newChoice = NSEntityDescription.insertNewObjectForEntityForName("Choice", inManagedObjectContext: appDel.managedObjectContext) as? Choice
     performSegueWithIdentifier("newChoiceSegue", sender: self)
   }
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     if segue.identifier == "newChoiceSegue" {
       if let destVC = segue.destinationViewController as? AddChoiceVC {
-        //destVC.newChoice = newChoice
+        destVC.newChoice = newChoice
       }
     }
   }

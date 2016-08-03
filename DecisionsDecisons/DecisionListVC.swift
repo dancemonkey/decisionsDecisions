@@ -21,13 +21,20 @@ class DecisionListVC: UIViewController, UICollectionViewDelegate, UICollectionVi
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+    Datasource.ds.fetchDecisions()
     collection.dataSource = self
     collection.delegate = self
   }
   
   override func viewWillAppear(animated: Bool) {
     decisionData = Datasource.ds.decisions
+    collection.reloadData()
+  }
+  
+  override func viewDidAppear(animated: Bool) {
+    super.viewDidAppear(animated)
+    //attemptFetch()
+    Datasource.ds.fetchDecisions()
     collection.reloadData()
   }
   
@@ -41,15 +48,19 @@ class DecisionListVC: UIViewController, UICollectionViewDelegate, UICollectionVi
   
   func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
     selectedCell = indexPath
-    self.performSegueWithIdentifier("ChoiceList", sender: self)
+    self.performSegueWithIdentifier("ChoiceList", sender: indexPath)
   }
   
   func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
     if let cell = collection.dequeueReusableCellWithReuseIdentifier("decisionCell", forIndexPath: indexPath) as? DecisionCell {
-      cell.configCell(withDecision: decisionData[indexPath.row])
+      configureCell(cell, indexPath: indexPath)
       return cell
     }
     return DecisionCell()
+  }
+  
+  func configureCell(cell: DecisionCell, indexPath: NSIndexPath) {
+    cell.configCell(withDecision: decisionData[indexPath.row])
   }
   
   @IBAction func newDecisionTapped(sender: UIButton) {
@@ -64,14 +75,13 @@ class DecisionListVC: UIViewController, UICollectionViewDelegate, UICollectionVi
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     if segue.identifier == "newDecisionSegue" {
       if let destination = segue.destinationViewController as? AddDecisionVC {
-        // don't need this right? since I've inserted the newDecision into the context?
-        // destination.newDecision = self.newDecision!
         destination.newDecision = self.newDecision
       }
     } else if segue.identifier == "ChoiceList" {
       if let destination = segue.destinationViewController as? ChoiceListVC {
         // same here, choiceListVC is reading right from CoreData
         // destination.decision = decisionData[selectedCell.row]
+        destination.decisionTitle = decisionData[((sender as? NSIndexPath)?.row)!].title
       }
     }
   }
