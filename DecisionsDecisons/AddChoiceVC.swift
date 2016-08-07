@@ -21,11 +21,10 @@ class AddChoiceVC: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     choiceTitleFld.becomeFirstResponder()
-    self.nextButton.enabled = false
   }
   
   @IBAction func nextBtnTapped(sender: UIButton) {
-    if let title = newChoice.title {
+    if let title = choiceTitleFld.text {
       newChoice.title = title
       if let valueStr = valueFld.text, let valueNum = Int(valueStr) {
         newChoice.value = valueNum
@@ -40,16 +39,15 @@ class AddChoiceVC: UIViewController {
   }
   
   @IBAction func textFieldChanged(sender: UITextField) {
-    if sender.text != nil && sender.text != "" {
-      self.nextButton.enabled = true
-    } else {
-      self.nextButton.enabled = false
-    }
+
   }
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     if segue.identifier == "nextStep" {
-      // pass newDecision to next step in the chain
+      // pass newChoice to next step in the chain
+      if let destVC = segue.destinationViewController as? OptionalChoiceFldVC {
+        destVC.newChoice = self.newChoice
+      }
     }
   }
   

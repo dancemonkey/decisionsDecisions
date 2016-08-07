@@ -89,8 +89,11 @@ class ChoiceListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
   
   
   @IBAction func newChoiceTapped(sender: UIButton) {
-    newChoice = NSEntityDescription.insertNewObjectForEntityForName("Choice", inManagedObjectContext: appDel.managedObjectContext) as? Choice
-    performSegueWithIdentifier("newChoiceSegue", sender: self)
+    if let nc = NSEntityDescription.entityForName("Choice", inManagedObjectContext: appDel.managedObjectContext) {
+      self.newChoice = NSManagedObject(entity: nc, insertIntoManagedObjectContext: nil) as? Choice
+      performSegueWithIdentifier("newChoiceSegue", sender: self)
+    }
+    
   }
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

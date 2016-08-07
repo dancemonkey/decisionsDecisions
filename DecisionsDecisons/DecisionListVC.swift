@@ -63,11 +63,6 @@ class DecisionListVC: UIViewController, UICollectionViewDelegate, UICollectionVi
   }
   
   @IBAction func newDecisionTapped(sender: UIButton) {
-    //    if let nd = NSEntityDescription.entityForName("Decision", inManagedObjectContext: appDel.managedObjectContext) {
-    //      self.newDecision = NSManagedObject(entity: nd, insertIntoManagedObjectContext: appDel.managedObjectContext) as? Decision
-    //      // if this is inserted then does that mean it will remain there until I save or remove it? I think yes?
-    //      // see what homey did in the Core Data video to handle this
-    //    }
     performSegueWithIdentifier("newDecisionSegue", sender: self)
   }
   

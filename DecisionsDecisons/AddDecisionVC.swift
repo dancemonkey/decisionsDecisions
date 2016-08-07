@@ -25,7 +25,7 @@ class AddDecisionVC: UIViewController {
   @IBAction func nextBtnTapped(sender: UIButton) {
     if let title = decisionNameTxtFld.text where title != "" {
       if let nd = NSEntityDescription.entityForName("Decision", inManagedObjectContext: appDel.managedObjectContext) {
-        self.newDecision = NSManagedObject(entity: nd, insertIntoManagedObjectContext: appDel.managedObjectContext) as? Decision
+        self.newDecision = NSManagedObject(entity: nd, insertIntoManagedObjectContext: nil) as? Decision
       }
         newDecision?.title = title
         performSegueWithIdentifier("nextStep", sender: self)

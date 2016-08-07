@@ -29,6 +29,7 @@ class AddCriteriaVC: UIViewController {
   
   //TODO: eventually test whether at least one field has a criteria in it
   @IBAction func doneTapped(sender: UIButton) {
+    appDel.managedObjectContext.insertObject(self.newDecision)
     var criteria = Set<Criterion>()
     for field in criteriaTxtFld where field != "" {
       if let criterion = NSEntityDescription.insertNewObjectForEntityForName("Criterion", inManagedObjectContext: appDel.managedObjectContext) as? Criterion {
