@@ -36,6 +36,10 @@
             <string>SFUIDisplay-Regular</string>
             <string>SFUIDisplay-Regular</string>
         </mutableArray>
+        <mutableArray key="SF-UI-Display-Semibold.otf">
+            <string>SFUIDisplay-Semibold</string>
+            <string>SFUIDisplay-Semibold</string>
+        </mutableArray>
     </customFonts>
     <scenes>
         <!--Choosy Chooserson-->
@@ -234,7 +238,7 @@
                                                         <constraint firstAttribute="height" constant="51" id="9Xc-ld-MGY"/>
                                                         <constraint firstAttribute="width" constant="486" id="vyX-oz-uV4"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -638,8 +642,8 @@
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="hHw-ft-Qdk"/>
                                         <exclude reference="UjY-Tl-5I8"/>
+                                        <exclude reference="hHw-ft-Qdk"/>
                                     </mask>
                                 </variation>
                             </label>
@@ -1141,24 +1145,76 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="74"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s6A-qw-UdO">
-                                                    <rect key="frame" x="8" y="8" width="584" height="58"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s6A-qw-UdO" userLabel="Inset Content View">
+                                                    <rect key="frame" x="8" y="8" width="576" height="58"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Criterion title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vei-im-K2t">
-                                                            <rect key="frame" x="8" y="18" width="111" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CA0-h9-bIf">
+                                                            <rect key="frame" x="8" y="8" width="560" height="42"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Criterion title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vei-im-K2t">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="42"/>
+                                                                    <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="15"/>
+                                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Icb-lh-6d9">
+                                                                    <rect key="frame" x="385" y="0.0" width="175" height="42"/>
+                                                                    <subviews>
+                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Single Empty Star" translatesAutoresizingMaskIntoConstraints="NO" id="BGF-I4-ZH5">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="35" height="42"/>
+                                                                        </imageView>
+                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Single Empty Star" translatesAutoresizingMaskIntoConstraints="NO" id="6Vq-fG-YFc">
+                                                                            <rect key="frame" x="35" y="0.0" width="35" height="42"/>
+                                                                        </imageView>
+                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Single Empty Star" translatesAutoresizingMaskIntoConstraints="NO" id="6AN-HG-ohC">
+                                                                            <rect key="frame" x="70" y="0.0" width="35" height="42"/>
+                                                                        </imageView>
+                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Single Empty Star" translatesAutoresizingMaskIntoConstraints="NO" id="03H-WD-lgU">
+                                                                            <rect key="frame" x="105" y="0.0" width="35" height="42"/>
+                                                                        </imageView>
+                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Single Empty Star" translatesAutoresizingMaskIntoConstraints="NO" id="TYc-6P-Vjk">
+                                                                            <rect key="frame" x="140" y="0.0" width="35" height="42"/>
+                                                                        </imageView>
+                                                                    </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="175" id="Uwn-GC-iT5"/>
+                                                                    </constraints>
+                                                                </stackView>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="35" id="7OQ-cJ-1BP"/>
+                                                            </constraints>
+                                                            <variation key="default">
+                                                                <mask key="constraints">
+                                                                    <exclude reference="7OQ-cJ-1BP"/>
+                                                                </mask>
+                                                            </variation>
+                                                        </stackView>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="1" green="0.93725490199999995" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="CA0-h9-bIf" secondAttribute="trailing" constant="8" id="1me-4l-d7a"/>
+                                                        <constraint firstAttribute="bottom" secondItem="CA0-h9-bIf" secondAttribute="bottom" constant="8" id="ZvA-Ae-JoX"/>
+                                                        <constraint firstItem="CA0-h9-bIf" firstAttribute="top" secondItem="s6A-qw-UdO" secondAttribute="top" constant="12" id="gJe-BM-s32"/>
+                                                        <constraint firstItem="CA0-h9-bIf" firstAttribute="leading" secondItem="s6A-qw-UdO" secondAttribute="leading" constant="8" id="qgg-1H-Kff"/>
+                                                        <constraint firstItem="CA0-h9-bIf" firstAttribute="top" secondItem="s6A-qw-UdO" secondAttribute="top" constant="8" id="uXd-jk-Z1D"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="gJe-BM-s32"/>
+                                                        </mask>
+                                                    </variation>
                                                 </view>
                                             </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="s6A-qw-UdO" secondAttribute="bottom" constant="8" id="1dl-rG-9Tx"/>
                                                 <constraint firstItem="s6A-qw-UdO" firstAttribute="leading" secondItem="7wy-rs-k4X" secondAttribute="leading" constant="8" id="Bdo-WG-yV5"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="s6A-qw-UdO" secondAttribute="trailing" constant="8" id="FkQ-vU-r9D"/>
                                                 <constraint firstItem="s6A-qw-UdO" firstAttribute="top" secondItem="7wy-rs-k4X" secondAttribute="top" constant="8" id="NhY-pZ-FhL"/>
-                                                <constraint firstAttribute="trailing" secondItem="s6A-qw-UdO" secondAttribute="trailing" constant="8" id="fDg-0y-rbh"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1210,6 +1266,7 @@
         <image name="AddNewCriteria" width="20" height="20"/>
         <image name="Camera-1" width="91" height="79"/>
         <image name="EmptyStars" width="175" height="35"/>
+        <image name="Single Empty Star" width="35" height="35"/>
         <image name="blue bground gradient" width="375" height="667"/>
         <image name="defaultDecImg" width="640" height="424"/>
     </resources>
