@@ -64,6 +64,8 @@
 		10D1E2721D58000500DB4996 /* Choice+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D1E2701D58000500DB4996 /* Choice+CoreDataProperties.swift */; };
 		10D1E2741D5806E500DB4996 /* RateCriteriaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D1E2731D5806E500DB4996 /* RateCriteriaVC.swift */; };
 		10D1E2751D5806E500DB4996 /* RateCriteriaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D1E2731D5806E500DB4996 /* RateCriteriaVC.swift */; };
+		10D23E381D5937FB00D2F976 /* RateCriteriaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D23E371D5937FB00D2F976 /* RateCriteriaCell.swift */; };
+		10D23E391D5937FB00D2F976 /* RateCriteriaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D23E371D5937FB00D2F976 /* RateCriteriaCell.swift */; };
 		10E51E0E1D443FFA0020E0DE /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E51E0D1D443FFA0020E0DE /* MaterialView.swift */; };
 		10E618231D29C1D9009F9A49 /* AddCriteriaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E618221D29C1D9009F9A49 /* AddCriteriaVC.swift */; };
 		10EF6D021D3463CD0045E598 /* ChoiceListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EF6D011D3463CD0045E598 /* ChoiceListVC.swift */; };
@@ -129,6 +131,7 @@
 		10CC16CF1D1F7DC1000A412A /* Datasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Datasource.swift; sourceTree = "<group>"; };
 		10D1E2701D58000500DB4996 /* Choice+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Choice+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		10D1E2731D5806E500DB4996 /* RateCriteriaVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateCriteriaVC.swift; sourceTree = "<group>"; };
+		10D23E371D5937FB00D2F976 /* RateCriteriaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateCriteriaCell.swift; sourceTree = "<group>"; };
 		10E51E0D1D443FFA0020E0DE /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		10E618221D29C1D9009F9A49 /* AddCriteriaVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCriteriaVC.swift; sourceTree = "<group>"; };
 		10EF6D011D3463CD0045E598 /* ChoiceListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceListVC.swift; sourceTree = "<group>"; };
@@ -237,6 +240,7 @@
 				109B20481D41AC76006F890D /* ChoiceCell.swift */,
 				10E51E0D1D443FFA0020E0DE /* MaterialView.swift */,
 				107F4A201D56CBA900F6AEAF /* BuildAdvanceCustomBtn.swift */,
+				10D23E371D5937FB00D2F976 /* RateCriteriaCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -452,6 +456,7 @@
 				107F4A211D56CBA900F6AEAF /* BuildAdvanceCustomBtn.swift in Sources */,
 				10CC16D01D1F7DC1000A412A /* Datasource.swift in Sources */,
 				109B20491D41AC76006F890D /* ChoiceCell.swift in Sources */,
+				10D23E381D5937FB00D2F976 /* RateCriteriaCell.swift in Sources */,
 				10D1E2741D5806E500DB4996 /* RateCriteriaVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -465,6 +470,7 @@
 				107F4A221D56CBA900F6AEAF /* BuildAdvanceCustomBtn.swift in Sources */,
 				10AC2A7B1D1F861E00C273C7 /* Datasource.swift in Sources */,
 				10D1E2721D58000500DB4996 /* Choice+CoreDataProperties.swift in Sources */,
+				10D23E391D5937FB00D2F976 /* RateCriteriaCell.swift in Sources */,
 				109B204A1D41AC76006F890D /* ChoiceCell.swift in Sources */,
 				10904ED81D4EE1A20048CEAF /* Criterion+CoreDataProperties.swift in Sources */,
 				10904EDB1D4EE2210048CEAF /* Decision.swift in Sources */,

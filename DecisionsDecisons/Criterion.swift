@@ -29,6 +29,9 @@ class Criterion: NSManagedObject {
   func setWeight(to weight: Float) {
     self.weight = weight
   }
-
+  
+  func setRating(to rating: Rating) {
+    self.rating = rating.rawValue
+  }
 
 }

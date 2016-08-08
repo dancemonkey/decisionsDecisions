@@ -74,8 +74,8 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F1l-0D-evU">
                                                     <rect key="frame" x="8" y="8" width="134" height="134"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="defaultDecImg" translatesAutoresizingMaskIntoConstraints="NO" id="HMm-9V-Hrh">
-                                                            <rect key="frame" x="-8" y="0.0" width="150" height="77"/>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultDecImg" translatesAutoresizingMaskIntoConstraints="NO" id="HMm-9V-Hrh">
+                                                            <rect key="frame" x="0.0" y="0.0" width="134" height="77"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="77" id="3Gt-5C-fBz"/>
                                                             </constraints>
@@ -1064,7 +1064,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Xcz-KH-eJX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="18"/>
-                                <state key="normal" title="Save and rate criteria">
+                                <state key="normal" title="Rate criteria">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -1122,7 +1122,7 @@
             </objects>
             <point key="canvasLocation" x="1794" y="1796"/>
         </scene>
-        <!--Rate CriteriaVC-->
+        <!--Rate Criteria-->
         <scene sceneID="ppc-YZ-DLq">
             <objects>
                 <viewController id="P1I-q2-xGw" customClass="RateCriteriaVC" customModule="DecisionsDecisons" customModuleProvider="target" sceneMemberID="viewController">
@@ -1138,7 +1138,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="75" id="hdC-WP-30x">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="rateCriteriaCell" rowHeight="75" id="hdC-WP-30x" customClass="RateCriteriaCell" customModule="DecisionsDecisons" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hdC-WP-30x" id="7wy-rs-k4X">
@@ -1154,7 +1154,7 @@
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Criterion title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vei-im-K2t">
                                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="42"/>
                                                                     <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="15"/>
-                                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Icb-lh-6d9">
@@ -1217,6 +1217,14 @@
                                                 <constraint firstItem="s6A-qw-UdO" firstAttribute="top" secondItem="7wy-rs-k4X" secondAttribute="top" constant="8" id="NhY-pZ-FhL"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="criteriaTitle" destination="Vei-im-K2t" id="8qk-Z8-T3C"/>
+                                            <outletCollection property="emptyStarCollection" destination="BGF-I4-ZH5" collectionClass="NSMutableArray" id="zkI-5m-LZ6"/>
+                                            <outletCollection property="emptyStarCollection" destination="6Vq-fG-YFc" collectionClass="NSMutableArray" id="5p9-AN-Ama"/>
+                                            <outletCollection property="emptyStarCollection" destination="6AN-HG-ohC" collectionClass="NSMutableArray" id="cY1-wN-kdg"/>
+                                            <outletCollection property="emptyStarCollection" destination="03H-WD-lgU" collectionClass="NSMutableArray" id="2If-bU-go1"/>
+                                            <outletCollection property="emptyStarCollection" destination="TYc-6P-Vjk" collectionClass="NSMutableArray" id="1Kw-ec-gN0"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -1229,13 +1237,15 @@
                             <constraint firstItem="47V-GD-MHZ" firstAttribute="top" secondItem="Qa5-wA-dpA" secondAttribute="bottom" id="UCQ-m1-kNv"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Rate Criteria" id="gc5-IK-iYR">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="8Eq-Cm-qA3">
+                            <connections>
+                                <action selector="doneTapped:" destination="P1I-q2-xGw" id="H0S-Kt-Vzl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="criteriaTitle" destination="Vei-im-K2t" id="cfq-Ek-sbQ"/>
-                        <outletCollection property="emptyStarCollection" destination="BGF-I4-ZH5" collectionClass="NSMutableArray" id="Lix-5a-mPq"/>
-                        <outletCollection property="emptyStarCollection" destination="6Vq-fG-YFc" collectionClass="NSMutableArray" id="kxP-AE-Zvb"/>
-                        <outletCollection property="emptyStarCollection" destination="6AN-HG-ohC" collectionClass="NSMutableArray" id="q9f-6q-9P9"/>
-                        <outletCollection property="emptyStarCollection" destination="03H-WD-lgU" collectionClass="NSMutableArray" id="W0m-jB-6Ur"/>
-                        <outletCollection property="emptyStarCollection" destination="TYc-6P-Vjk" collectionClass="NSMutableArray" id="d2v-4S-apB"/>
+                        <outlet property="tableview" destination="47V-GD-MHZ" id="F4E-WL-fI4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ech-uk-OdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
