@@ -8,9 +8,9 @@
 
 import Foundation
 
-enum Rating: Int {
-  case notRated = 0, oneStar, twoStar, threeStar, fourStar, fiveStar
-}
+//enum Rating: Int {
+//  case notRated = 0, oneStar, twoStar, threeStar, fourStar, fiveStar
+//}
 
 class _Criterion {
   

@@ -9,6 +9,9 @@
 import Foundation
 import CoreData
 
+enum Rating: Int {
+  case notRated = 0, oneStar, twoStar, threeStar, fourStar, fiveStar
+}
 
 class Criterion: NSManagedObject {
 

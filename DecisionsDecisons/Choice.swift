@@ -24,8 +24,18 @@ class Choice: NSManagedObject {
     return sum
   }
   
+  func setDefaultWeight() {
+    let weight = 1/Float((self.criteria?.count)!)
+    if let criteria = self.criteria {
+      for criterion in criteria {
+        (criterion as? Criterion)!.setWeight(to: weight)
+      }
+    }
+  }
+  
   func returnRatingPct() -> Float {
-    return self.returnAverageRating()/5.0
+    return self.returnAverageRating()/5.0 // magic number for now until all data models up and running
+                                          // replace with size of criteria array
   }
   
   

@@ -1160,19 +1160,19 @@
                                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Icb-lh-6d9">
                                                                     <rect key="frame" x="385" y="0.0" width="175" height="42"/>
                                                                     <subviews>
-                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Single Empty Star" translatesAutoresizingMaskIntoConstraints="NO" id="BGF-I4-ZH5">
+                                                                        <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Single Empty Star" highlightedImage="Single Full Star" translatesAutoresizingMaskIntoConstraints="NO" id="BGF-I4-ZH5">
                                                                             <rect key="frame" x="0.0" y="0.0" width="35" height="42"/>
                                                                         </imageView>
-                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Single Empty Star" translatesAutoresizingMaskIntoConstraints="NO" id="6Vq-fG-YFc">
+                                                                        <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Single Empty Star" highlightedImage="Single Full Star" translatesAutoresizingMaskIntoConstraints="NO" id="6Vq-fG-YFc">
                                                                             <rect key="frame" x="35" y="0.0" width="35" height="42"/>
                                                                         </imageView>
-                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Single Empty Star" translatesAutoresizingMaskIntoConstraints="NO" id="6AN-HG-ohC">
+                                                                        <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Single Empty Star" highlightedImage="Single Full Star" translatesAutoresizingMaskIntoConstraints="NO" id="6AN-HG-ohC">
                                                                             <rect key="frame" x="70" y="0.0" width="35" height="42"/>
                                                                         </imageView>
-                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Single Empty Star" translatesAutoresizingMaskIntoConstraints="NO" id="03H-WD-lgU">
+                                                                        <imageView userInteractionEnabled="NO" tag="4" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Single Empty Star" highlightedImage="Single Full Star" translatesAutoresizingMaskIntoConstraints="NO" id="03H-WD-lgU">
                                                                             <rect key="frame" x="105" y="0.0" width="35" height="42"/>
                                                                         </imageView>
-                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Single Empty Star" translatesAutoresizingMaskIntoConstraints="NO" id="TYc-6P-Vjk">
+                                                                        <imageView userInteractionEnabled="NO" tag="5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Single Empty Star" highlightedImage="Single Full Star" translatesAutoresizingMaskIntoConstraints="NO" id="TYc-6P-Vjk">
                                                                             <rect key="frame" x="140" y="0.0" width="35" height="42"/>
                                                                         </imageView>
                                                                     </subviews>
@@ -1229,6 +1229,14 @@
                             <constraint firstItem="47V-GD-MHZ" firstAttribute="top" secondItem="Qa5-wA-dpA" secondAttribute="bottom" id="UCQ-m1-kNv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="criteriaTitle" destination="Vei-im-K2t" id="cfq-Ek-sbQ"/>
+                        <outletCollection property="emptyStarCollection" destination="BGF-I4-ZH5" collectionClass="NSMutableArray" id="Lix-5a-mPq"/>
+                        <outletCollection property="emptyStarCollection" destination="6Vq-fG-YFc" collectionClass="NSMutableArray" id="kxP-AE-Zvb"/>
+                        <outletCollection property="emptyStarCollection" destination="6AN-HG-ohC" collectionClass="NSMutableArray" id="q9f-6q-9P9"/>
+                        <outletCollection property="emptyStarCollection" destination="03H-WD-lgU" collectionClass="NSMutableArray" id="W0m-jB-6Ur"/>
+                        <outletCollection property="emptyStarCollection" destination="TYc-6P-Vjk" collectionClass="NSMutableArray" id="d2v-4S-apB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ech-uk-OdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1267,6 +1275,7 @@
         <image name="Camera-1" width="91" height="79"/>
         <image name="EmptyStars" width="175" height="35"/>
         <image name="Single Empty Star" width="35" height="35"/>
+        <image name="Single Full Star" width="35" height="35"/>
         <image name="blue bground gradient" width="375" height="667"/>
         <image name="defaultDecImg" width="640" height="424"/>
     </resources>

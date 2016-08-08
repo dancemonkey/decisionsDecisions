@@ -9,27 +9,18 @@
 import UIKit
 
 class RateCriteriaVC: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+  
+  @IBOutlet weak var criteriaTitle: UILabel!
+  @IBOutlet var emptyStarCollection: [UIImageView]!
+  
+  var decision: Decision!
+  var newChoice: Choice!
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    // SET DEFAULT WEIGHTS FOR CRITERION BEFORE LEAVING THIS VIEW
+    // PUT NEWCHOICE INTO PROPER CONTEXT, PUT DECISION REFERENCE INTO NEWCHOICE, AND SAVE CONTEXT
+  }
+  
 }
