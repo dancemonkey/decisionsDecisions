@@ -5,6 +5,7 @@
         <attribute name="details" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="value" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <relationship name="criteria" optional="YES" toMany="YES" minCount="1" maxCount="5" deletionRule="Nullify" destinationEntity="Criterion" inverseName="choice" inverseEntity="Criterion" syncable="YES"/>
         <relationship name="decision" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Decision" inverseName="choices" inverseEntity="Decision" syncable="YES"/>
@@ -24,7 +25,7 @@
         <relationship name="choices" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Choice" inverseName="decision" inverseEntity="Choice" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Choice" positionX="259" positionY="261" width="128" height="150"/>
+        <element name="Choice" positionX="259" positionY="261" width="128" height="165"/>
         <element name="Criterion" positionX="295" positionY="-63" width="128" height="118"/>
         <element name="Decision" positionX="-54" positionY="18" width="128" height="118"/>
     </elements>

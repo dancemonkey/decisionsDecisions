@@ -14,7 +14,7 @@ class ChoiceListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
   @IBOutlet weak var tableView: UITableView!
   
   var fetchedResultsController: NSFetchedResultsController!
-  var decisionTitle: String!
+  var decision: Decision!
   var newChoice: Choice!
   
   override func viewDidLoad() {
@@ -78,7 +78,7 @@ class ChoiceListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
   
   func setFetchedResults() {
     let fetchRequest = NSFetchRequest(entityName: "Choice")
-    let predicate = NSPredicate(format: "decision.title == %@", "\(self.decisionTitle)")
+    let predicate = NSPredicate(format: "decision.title == %@", "\(self.decision.title)")
     let sortDescriptor = NSSortDescriptor(key: "title", ascending: true)
     fetchRequest.sortDescriptors = [sortDescriptor]
     fetchRequest.predicate = predicate
@@ -99,7 +99,8 @@ class ChoiceListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     if segue.identifier == "newChoiceSegue" {
       if let destVC = segue.destinationViewController as? AddChoiceVC {
-        destVC.newChoice = newChoice
+        destVC.newChoice = self.newChoice
+        destVC.decision = self.decision
       }
     }
   }
@@ -127,9 +128,9 @@ class ChoiceListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
       }
       break
     case .Update:
-      if let indexPath = newIndexPath {
+      if let indexPath = indexPath {
         let cell = tableView.cellForRowAtIndexPath(indexPath) as! ChoiceCell
-        // update cell data
+        configureCell(cell, indexPath: indexPath)
       }
       break
     case .Move:

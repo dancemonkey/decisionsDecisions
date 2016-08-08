@@ -38,8 +38,6 @@
 		10904ED81D4EE1A20048CEAF /* Criterion+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10904ED01D4EE12D0048CEAF /* Criterion+CoreDataProperties.swift */; };
 		10904EDA1D4EE1A70048CEAF /* Decision+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10904ED21D4EE12D0048CEAF /* Decision+CoreDataProperties.swift */; };
 		10904EDB1D4EE2210048CEAF /* Decision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1045E9A21D4CFF3F00BB49C3 /* Decision.swift */; };
-		10904EE01D4EE2F70048CEAF /* Choice+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10904EDF1D4EE2F70048CEAF /* Choice+CoreDataProperties.swift */; };
-		10904EE11D4EE2FF0048CEAF /* Choice+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10904EDF1D4EE2F70048CEAF /* Choice+CoreDataProperties.swift */; };
 		109B20491D41AC76006F890D /* ChoiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109B20481D41AC76006F890D /* ChoiceCell.swift */; };
 		109B204A1D41AC76006F890D /* ChoiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109B20481D41AC76006F890D /* ChoiceCell.swift */; };
 		109F09011D20ADE10034BC01 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109F09001D20ADE10034BC01 /* Extensions.swift */; };
@@ -62,6 +60,10 @@
 		10AC2A951D1F895C00C273C7 /* DecisionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AC2A941D1F895C00C273C7 /* DecisionCell.swift */; };
 		10AC2A961D1F895C00C273C7 /* DecisionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AC2A941D1F895C00C273C7 /* DecisionCell.swift */; };
 		10CC16D01D1F7DC1000A412A /* Datasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CC16CF1D1F7DC1000A412A /* Datasource.swift */; };
+		10D1E2711D58000500DB4996 /* Choice+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D1E2701D58000500DB4996 /* Choice+CoreDataProperties.swift */; };
+		10D1E2721D58000500DB4996 /* Choice+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D1E2701D58000500DB4996 /* Choice+CoreDataProperties.swift */; };
+		10D1E2741D5806E500DB4996 /* RateCriteriaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D1E2731D5806E500DB4996 /* RateCriteriaVC.swift */; };
+		10D1E2751D5806E500DB4996 /* RateCriteriaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D1E2731D5806E500DB4996 /* RateCriteriaVC.swift */; };
 		10E51E0E1D443FFA0020E0DE /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E51E0D1D443FFA0020E0DE /* MaterialView.swift */; };
 		10E618231D29C1D9009F9A49 /* AddCriteriaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E618221D29C1D9009F9A49 /* AddCriteriaVC.swift */; };
 		10EF6D021D3463CD0045E598 /* ChoiceListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EF6D011D3463CD0045E598 /* ChoiceListVC.swift */; };
@@ -111,7 +113,6 @@
 		107F4A201D56CBA900F6AEAF /* BuildAdvanceCustomBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildAdvanceCustomBtn.swift; sourceTree = "<group>"; };
 		10904ED01D4EE12D0048CEAF /* Criterion+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Criterion+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		10904ED21D4EE12D0048CEAF /* Decision+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Decision+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		10904EDF1D4EE2F70048CEAF /* Choice+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Choice+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		109B20481D41AC76006F890D /* ChoiceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceCell.swift; sourceTree = "<group>"; };
 		109F09001D20ADE10034BC01 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		109F09021D20AE5D0034BC01 /* AddDecisionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDecisionVC.swift; sourceTree = "<group>"; };
@@ -126,6 +127,8 @@
 		10AC2A8A1D1F892800C273C7 /* SF-UI-Display-Ultralight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Ultralight.otf"; sourceTree = "<group>"; };
 		10AC2A941D1F895C00C273C7 /* DecisionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecisionCell.swift; sourceTree = "<group>"; };
 		10CC16CF1D1F7DC1000A412A /* Datasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Datasource.swift; sourceTree = "<group>"; };
+		10D1E2701D58000500DB4996 /* Choice+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Choice+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		10D1E2731D5806E500DB4996 /* RateCriteriaVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateCriteriaVC.swift; sourceTree = "<group>"; };
 		10E51E0D1D443FFA0020E0DE /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		10E618221D29C1D9009F9A49 /* AddCriteriaVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCriteriaVC.swift; sourceTree = "<group>"; };
 		10EF6D011D3463CD0045E598 /* ChoiceListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceListVC.swift; sourceTree = "<group>"; };
@@ -221,6 +224,7 @@
 				10EF6D011D3463CD0045E598 /* ChoiceListVC.swift */,
 				1065FAB81D45A1E700D1B994 /* AddChoiceVC.swift */,
 				107F4A1D1D56C97700F6AEAF /* OptionalChoiceFldVC.swift */,
+				10D1E2731D5806E500DB4996 /* RateCriteriaVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -253,7 +257,7 @@
 		1045E9AB1D4CFF5A00BB49C3 /* Generated */ = {
 			isa = PBXGroup;
 			children = (
-				10904EDF1D4EE2F70048CEAF /* Choice+CoreDataProperties.swift */,
+				10D1E2701D58000500DB4996 /* Choice+CoreDataProperties.swift */,
 				10904ED01D4EE12D0048CEAF /* Criterion+CoreDataProperties.swift */,
 				10904ED21D4EE12D0048CEAF /* Decision+CoreDataProperties.swift */,
 			);
@@ -437,8 +441,8 @@
 				1045E9A81D4CFF3F00BB49C3 /* Choice.swift in Sources */,
 				105E67AE1D2072FE003AC6F0 /* _Choice.swift in Sources */,
 				10E51E0E1D443FFA0020E0DE /* MaterialView.swift in Sources */,
-				10904EE01D4EE2F70048CEAF /* Choice+CoreDataProperties.swift in Sources */,
 				10904ED61D4EE12D0048CEAF /* Decision+CoreDataProperties.swift in Sources */,
+				10D1E2711D58000500DB4996 /* Choice+CoreDataProperties.swift in Sources */,
 				102B56981D1A3E7900165942 /* DecisionListVC.swift in Sources */,
 				10AC2A951D1F895C00C273C7 /* DecisionCell.swift in Sources */,
 				107F4A1E1D56C97700F6AEAF /* OptionalChoiceFldVC.swift in Sources */,
@@ -448,6 +452,7 @@
 				107F4A211D56CBA900F6AEAF /* BuildAdvanceCustomBtn.swift in Sources */,
 				10CC16D01D1F7DC1000A412A /* Datasource.swift in Sources */,
 				109B20491D41AC76006F890D /* ChoiceCell.swift in Sources */,
+				10D1E2741D5806E500DB4996 /* RateCriteriaVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,6 +464,7 @@
 				102B56AE1D1A3E7A00165942 /* DecisionsDecisonsTests.swift in Sources */,
 				107F4A221D56CBA900F6AEAF /* BuildAdvanceCustomBtn.swift in Sources */,
 				10AC2A7B1D1F861E00C273C7 /* Datasource.swift in Sources */,
+				10D1E2721D58000500DB4996 /* Choice+CoreDataProperties.swift in Sources */,
 				109B204A1D41AC76006F890D /* ChoiceCell.swift in Sources */,
 				10904ED81D4EE1A20048CEAF /* Criterion+CoreDataProperties.swift in Sources */,
 				10904EDB1D4EE2210048CEAF /* Decision.swift in Sources */,
@@ -473,8 +479,8 @@
 				10AC2A961D1F895C00C273C7 /* DecisionCell.swift in Sources */,
 				10AC2A7D1D1F862200C273C7 /* DecisionListVC.swift in Sources */,
 				10018C3A1D4FDAED00283827 /* Extensions.swift in Sources */,
+				10D1E2751D5806E500DB4996 /* RateCriteriaVC.swift in Sources */,
 				10018C3C1D4FDB1000283827 /* Criterion.swift in Sources */,
-				10904EE11D4EE2FF0048CEAF /* Choice+CoreDataProperties.swift in Sources */,
 				102B56D31D1B744E00165942 /* _Decision.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

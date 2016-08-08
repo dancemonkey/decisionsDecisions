@@ -9,22 +9,53 @@
 import UIKit
 import CoreData
 
-class OptionalChoiceFldVC: UIViewController {
+class OptionalChoiceFldVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
   
-  @IBOutlet weak var imageAddBtn: UIButton!
+  @IBOutlet weak var imageAddBtn: UIButton! // SET ROUNDED CORNERS FOR THIS DUDE
   @IBOutlet weak var addressFld: UITextField!
   @IBOutlet weak var urlField: UITextField!
   
+  let imagePicker = UIImagePickerController()
+  
   var newChoice: Choice!
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+  var decision: Decision!
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    imagePicker.delegate = self
+  }
   
   @IBAction func nextBtnTapped(sender: UIButton) {
-    // test for valid data, populate data in newChoice, then pass to next VC
+    if let address = addressFld.text {
+      newChoice.address = address
+    }
+    if let url = urlField.text {
+      newChoice.url = url
+    }
+    performSegueWithIdentifier("nextStep", sender: self)
   }
+  
+  @IBAction func imageBtnTapped(sender: UIButton) {
+    
+    imagePicker.allowsEditing = false
+    presentViewController(imagePicker, animated: true, completion: nil)
+    
+  }
+  
+  func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+    if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+      imageAddBtn.setBackgroundImage(pickedImage, forState: .Normal)
+      imageAddBtn.setTitle("", forState: .Normal)
+      newChoice.image = UIImagePNGRepresentation(pickedImage)
+    }
+    dismissViewControllerAnimated(true, completion: nil)
+  }
+  
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if segue.identifier == "nextStep" {
+      // pass newChoice and decision onto the next (and final) VC
 
+    }
+  }
+  
 }

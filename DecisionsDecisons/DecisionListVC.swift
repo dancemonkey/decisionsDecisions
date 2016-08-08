@@ -9,15 +9,13 @@
 import UIKit
 import CoreData
 
-class DecisionListVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, NSFetchedResultsControllerDelegate {
+class DecisionListVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
   
   @IBOutlet weak var collection: UICollectionView!
   
   var decisionData: [Decision]!
   var newDecision: Decision?
   var selectedCell: NSIndexPath!
-  
-  var fetchedResultsController: NSFetchedResultsController!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -68,12 +66,10 @@ class DecisionListVC: UIViewController, UICollectionViewDelegate, UICollectionVi
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     if segue.identifier == "newDecisionSegue" {
-      //      if let destination = segue.destinationViewController as? AddDecisionVC {
-      //        destination.newDecision = self.newDecision
-      //      }
+      
     } else if segue.identifier == "ChoiceList" {
       if let destination = segue.destinationViewController as? ChoiceListVC {
-        destination.decisionTitle = decisionData[((sender as? NSIndexPath)?.row)!].title
+        destination.decision = decisionData[((sender as? NSIndexPath)?.row)!]
       }
     }
   }
