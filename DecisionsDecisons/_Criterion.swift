@@ -33,14 +33,14 @@ class _Criterion {
     self._title = title
   }
   
-  func returnWeightedRating() -> Float? {
-    if let wt = _weight {
-      return Float(_rating.rawValue) * wt
-    } else {
-      print("You forget to set the default weighted values!")
-      return nil
-    }
-  }
+//  func returnWeightedRating() -> Float? {
+//    if let wt = _weight {
+//      return Float(_rating.rawValue) * wt
+//    } else {
+//      print("You forget to set the default weighted values!")
+//      return nil
+//    }
+//  }
   
   func setWeight(to weight: Float) {
     self._weight = weight

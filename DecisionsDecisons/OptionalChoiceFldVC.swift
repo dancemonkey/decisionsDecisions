@@ -53,7 +53,6 @@ class OptionalChoiceFldVC: UIViewController, UIImagePickerControllerDelegate, UI
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     if segue.identifier == "nextStep" {
-      // pass newChoice and decision onto the next (and final) VC
       if let destVC = segue.destinationViewController as? RateCriteriaVC {
         destVC.decision = self.decision
         destVC.newChoice = self.newChoice

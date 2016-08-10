@@ -29,11 +29,10 @@ class RateCriteriaCell: UITableViewCell {
   override func setSelected(selected: Bool, animated: Bool) {
     super.setSelected(selected, animated: animated)
     
-    // Configure the view for the selected state
   }
   
-  func starTapped(sender: UIImageView) {
-    print(sender.tag)
+  func starTapped(sender: UITapGestureRecognizer) {
+    print("\(sender.view?.tag) tapped")
   }
   
   func configureCell(withCriterion criterion: Criterion) {

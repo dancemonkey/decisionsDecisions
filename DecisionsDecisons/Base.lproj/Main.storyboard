@@ -1138,42 +1138,42 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="rateCriteriaCell" rowHeight="75" id="hdC-WP-30x" customClass="RateCriteriaCell" customModule="DecisionsDecisons" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="75"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="rateCriteriaCell" rowHeight="125" id="hdC-WP-30x" customClass="RateCriteriaCell" customModule="DecisionsDecisons" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="125"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hdC-WP-30x" id="7wy-rs-k4X">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="74"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="124"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s6A-qw-UdO" userLabel="Inset Content View">
-                                                    <rect key="frame" x="8" y="8" width="576" height="58"/>
+                                                    <rect key="frame" x="8" y="8" width="576" height="108"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CA0-h9-bIf">
-                                                            <rect key="frame" x="8" y="8" width="560" height="42"/>
+                                                            <rect key="frame" x="8" y="8" width="560" height="92"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Criterion title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vei-im-K2t">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="42"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="92"/>
                                                                     <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="15"/>
                                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Icb-lh-6d9">
-                                                                    <rect key="frame" x="385" y="0.0" width="175" height="42"/>
+                                                                    <rect key="frame" x="385" y="0.0" width="175" height="92"/>
                                                                     <subviews>
                                                                         <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Single Empty Star" highlightedImage="Single Full Star" translatesAutoresizingMaskIntoConstraints="NO" id="BGF-I4-ZH5">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="35" height="42"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="35" height="92"/>
                                                                         </imageView>
                                                                         <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Single Empty Star" highlightedImage="Single Full Star" translatesAutoresizingMaskIntoConstraints="NO" id="6Vq-fG-YFc">
-                                                                            <rect key="frame" x="35" y="0.0" width="35" height="42"/>
+                                                                            <rect key="frame" x="35" y="0.0" width="35" height="92"/>
                                                                         </imageView>
                                                                         <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Single Empty Star" highlightedImage="Single Full Star" translatesAutoresizingMaskIntoConstraints="NO" id="6AN-HG-ohC">
-                                                                            <rect key="frame" x="70" y="0.0" width="35" height="42"/>
+                                                                            <rect key="frame" x="70" y="0.0" width="35" height="92"/>
                                                                         </imageView>
                                                                         <imageView userInteractionEnabled="NO" tag="4" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Single Empty Star" highlightedImage="Single Full Star" translatesAutoresizingMaskIntoConstraints="NO" id="03H-WD-lgU">
-                                                                            <rect key="frame" x="105" y="0.0" width="35" height="42"/>
+                                                                            <rect key="frame" x="105" y="0.0" width="35" height="92"/>
                                                                         </imageView>
                                                                         <imageView userInteractionEnabled="NO" tag="5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Single Empty Star" highlightedImage="Single Full Star" translatesAutoresizingMaskIntoConstraints="NO" id="TYc-6P-Vjk">
-                                                                            <rect key="frame" x="140" y="0.0" width="35" height="42"/>
+                                                                            <rect key="frame" x="140" y="0.0" width="35" height="92"/>
                                                                         </imageView>
                                                                     </subviews>
                                                                     <constraints>
@@ -1217,6 +1217,9 @@
                                                 <constraint firstItem="s6A-qw-UdO" firstAttribute="top" secondItem="7wy-rs-k4X" secondAttribute="top" constant="8" id="NhY-pZ-FhL"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="NO"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="criteriaTitle" destination="Vei-im-K2t" id="8qk-Z8-T3C"/>
                                             <outletCollection property="emptyStarCollection" destination="BGF-I4-ZH5" collectionClass="NSMutableArray" id="zkI-5m-LZ6"/>

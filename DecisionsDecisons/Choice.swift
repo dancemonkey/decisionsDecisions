@@ -34,10 +34,10 @@ class Choice: NSManagedObject {
   }
   
   func returnRatingPct() -> Float {
-    return self.returnAverageRating()/5.0 // magic number for now until all data models up and running
-                                          // replace with size of criteria array
+    if let crit = self.criteria {
+      return self.returnAverageRating()/Float(crit.count)
+    }
+    return 0
   }
-  
-  
   
 }

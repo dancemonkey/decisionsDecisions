@@ -14,8 +14,6 @@ enum Rating: Int {
 }
 
 class Criterion: NSManagedObject {
-
-// Insert code here to add functionality to your managed object subclass
   
   func returnWeightedRating() -> Float? {
     if let wt = weight?.floatValue {

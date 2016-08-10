@@ -33,7 +33,7 @@ class AddCriteriaVC: UIViewController {
     appDel.managedObjectContext.insertObject(self.newDecision)
     
     var criteria = Set<Criterion>()
-    for field in criteriaTxtFld where field != "" {
+    for field in criteriaTxtFld where field.text != "" {
       if let criterion = NSEntityDescription.insertNewObjectForEntityForName("Criterion", inManagedObjectContext: appDel.managedObjectContext) as? Criterion {
         criterion.title = field.text
         criterion.decision = self.newDecision

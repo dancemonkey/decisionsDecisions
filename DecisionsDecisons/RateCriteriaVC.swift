@@ -11,10 +11,11 @@ import CoreData
 
 class RateCriteriaVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
   
-    
+  
   var decision: Decision!
   var newChoice: Choice!
   var ratingSelections = [Rating]()
+  var tempCriteria = [Criterion]()
   
   @IBOutlet weak var tableview: UITableView!
   
@@ -24,8 +25,10 @@ class RateCriteriaVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     tableview.dataSource = self
     tableview.delegate = self
     
-    // PUT NEWCHOICE INTO PROPER CONTEXT, PUT DECISION REFERENCE INTO NEWCHOICE, AND SAVE CONTEXT
-    // SET DEFAULT WEIGHTS FOR ALL CRITERION WHEN LOADING THIS VIEW
+    newChoice.setDefaultWeight()
+    if let criteria = decision.baseCriteria?.allObjects as? [Criterion] {
+      tempCriteria = criteria
+    }
   }
   
   @IBAction func doneTapped(sender: AnyObject) {
@@ -42,18 +45,18 @@ class RateCriteriaVC: UIViewController, UITableViewDelegate, UITableViewDataSour
       print("\(error)")
     }
     
-    
-
   }
   
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    if let count = newChoice.criteria?.count {
-      return count
-    }
-    return 0
+    return tempCriteria.count
   }
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    if let cell = tableView.dequeueReusableCellWithIdentifier("rateCriteriaCell") as? RateCriteriaCell {
+      cell.configureCell(withCriterion: (tempCriteria[indexPath.row]))
+      print("cell configured")
+      return cell
+    }
     return RateCriteriaCell()
   }
   
@@ -63,6 +66,10 @@ class RateCriteriaVC: UIViewController, UITableViewDelegate, UITableViewDataSour
   
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     // PASS INDEX PATH TO SELECTED ROW, SO DATA CAN BE UPDATED FROM THE CELL AFTER USER RATES THE CRITERIA
+  }
+  
+  func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    return 125
   }
   
 }
