@@ -66,10 +66,6 @@ class RateCriteriaVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     return 1
   }
   
-  func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    // PASS INDEX PATH TO SELECTED ROW, SO DATA CAN BE UPDATED FROM THE CELL AFTER USER RATES THE CRITERIA
-  }
-  
   func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
     return 125
   }

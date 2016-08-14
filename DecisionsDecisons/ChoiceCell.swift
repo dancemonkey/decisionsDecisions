@@ -13,7 +13,9 @@ class ChoiceCell: UITableViewCell {
   
   @IBOutlet weak var thumb: UIImageView!
   @IBOutlet weak var title: UILabel!
-  @IBOutlet weak var favImg: UIImageView! // add tap gesture recognizer to this?
+  // TODO: add tap gesture to favImg so you can fav the choice
+  @IBOutlet weak var favImg: UIImageView!
+  @IBOutlet weak var emptyStarImg: UIImageView!
   @IBOutlet weak var ratingImg: UIImageView!
   @IBOutlet weak var ratingImgWidth: NSLayoutConstraint!
   
@@ -21,13 +23,11 @@ class ChoiceCell: UITableViewCell {
   
   override func awakeFromNib() {
     super.awakeFromNib()
-    // Initialization code
   }
   
   override func setSelected(selected: Bool, animated: Bool) {
     super.setSelected(selected, animated: animated)
     
-    // Configure the view for the selected state
   }
   
   func configureCell(withChoice choice: Choice) {
@@ -40,10 +40,10 @@ class ChoiceCell: UITableViewCell {
     self.title.text = choice.title
     self.favImg.image = UIImage(named: "FavEmpty")
     
-    // currently only displays properly on device scale of 2x
+    // TODO: fix, currently only displays properly on device scale of 2x
     
     let originalImg = UIImage(named: "5 Stars")
-    let imgWidth = ratingImg.frame.width * deviceScale
+    let imgWidth = emptyStarImg.frame.width * deviceScale
     let ratingPct:CGFloat = CGFloat(choice.returnRatingPct())
     let ratingMultiplier = ratingPct > 0 ? ratingPct : 1
     let rect = CGRect(x: 0, y: 0, width: imgWidth*ratingMultiplier, height: 70)

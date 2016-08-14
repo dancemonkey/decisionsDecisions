@@ -78,12 +78,15 @@ class ChoiceListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
   }
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    
     if segue.identifier == "newChoiceSegue" {
       if let destVC = segue.destinationViewController as? AddChoiceVC {
         destVC.newChoice = self.newChoice
         destVC.decision = self.decision
       }
-    } else if segue.identifier == "choiceSelected" {
+    }
+    
+    if segue.identifier == "choiceSelected" {
       if let destVC = segue.destinationViewController as? ChoiceVC {
         destVC.choice = sender as? Choice
       }

@@ -11,7 +11,8 @@ import CoreData
 
 class OptionalChoiceFldVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
   
-  @IBOutlet weak var imageAddBtn: UIButton! // SET ROUNDED CORNERS FOR THIS DUDE
+  // TODO: subclass and style imageAddBtn
+  @IBOutlet weak var imageAddBtn: UIButton! 
   @IBOutlet weak var addressFld: UITextField!
   @IBOutlet weak var urlField: UITextField!
   

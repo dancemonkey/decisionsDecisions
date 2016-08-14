@@ -15,9 +15,8 @@ class ChoiceVC: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    print(choice)
+    self.title = choice.title
     
-    // Do any additional setup after loading the view.
   }
   
 }
