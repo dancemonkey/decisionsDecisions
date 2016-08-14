@@ -13,7 +13,6 @@ class ChoiceListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
   
   @IBOutlet weak var tableView: UITableView!
   
-//  var fetchedResultsController: NSFetchedResultsController!
   var decision: Decision!
   var newChoice: Choice!
   var choiceList: [Choice]!
@@ -21,7 +20,6 @@ class ChoiceListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
   override func viewDidLoad() {
     
     super.viewDidLoad()
-    //attemptFetch()
     tableView.dataSource = self
     tableView.delegate = self
     
@@ -48,9 +46,11 @@ class ChoiceListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
   }
   
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    
     return choiceList.count
-    
+  }
+  
+  func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    performSegueWithIdentifier("choiceSelected", sender: choiceList[indexPath.row])
   }
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -69,30 +69,6 @@ class ChoiceListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     return 115
   }
   
-//  func attemptFetch() {
-//    setFetchedResults()
-//    
-//    do {
-//      try  self.fetchedResultsController.performFetch()
-//    } catch {
-//      let error = error as NSError
-//      print("\(error)")
-//    }
-//    
-//  }
-  
-//  func setFetchedResults() {
-//    let fetchRequest = NSFetchRequest(entityName: "Choice")
-//    let predicate = NSPredicate(format: "decision.title == %@", "\(self.decision.title)")
-//    let sortDescriptor = NSSortDescriptor(key: "title", ascending: true)
-//    fetchRequest.sortDescriptors = [sortDescriptor]
-//    fetchRequest.predicate = predicate
-//    let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: appDel.managedObjectContext, sectionNameKeyPath: "title", cacheName: nil)
-//    controller.delegate = self
-//    fetchedResultsController = controller
-//  }
-  
-  
   @IBAction func newChoiceTapped(sender: UIButton) {
     if let nc = NSEntityDescription.entityForName("Choice", inManagedObjectContext: appDel.managedObjectContext) {
       self.newChoice = NSManagedObject(entity: nc, insertIntoManagedObjectContext: nil) as? Choice
@@ -107,47 +83,11 @@ class ChoiceListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         destVC.newChoice = self.newChoice
         destVC.decision = self.decision
       }
+    } else if segue.identifier == "choiceSelected" {
+      if let destVC = segue.destinationViewController as? ChoiceVC {
+        destVC.choice = sender as? Choice
+      }
     }
   }
-  
-  
-//  func controllerWillChangeContent(controller: NSFetchedResultsController) {
-//    tableView.beginUpdates()
-//  }
-//  
-//  func controllerDidChangeContent(controller: NSFetchedResultsController) {
-//    tableView.endUpdates()
-//  }
-//  
-//  func controller(controller: NSFetchedResultsController, didChangeObject anObject: AnyObject, atIndexPath indexPath: NSIndexPath?, forChangeType type: NSFetchedResultsChangeType, newIndexPath: NSIndexPath?) {
-//    
-//    switch (type) {
-//    case .Insert:
-//      if let indexPath = newIndexPath {
-//        tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-//      }
-//      break
-//    case .Delete:
-//      if let indexPath = newIndexPath {
-//        tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-//      }
-//      break
-//    case .Update:
-//      if let indexPath = indexPath {
-//        let cell = tableView.cellForRowAtIndexPath(indexPath) as! ChoiceCell
-//        configureCell(cell, indexPath: indexPath)
-//      }
-//      break
-//    case .Move:
-//      if let indexPath = newIndexPath {
-//        tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-//      }
-//      if let newIndexPath = newIndexPath {
-//        tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Fade)
-//      }
-//      break
-//    }
-//    
-//  }
   
 }

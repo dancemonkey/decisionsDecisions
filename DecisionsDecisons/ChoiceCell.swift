@@ -50,6 +50,7 @@ class ChoiceCell: UITableViewCell {
     let ref: CGImageRef = CGImageCreateWithImageInRect(originalImg?.CGImage, rect)!
     self.ratingImg.image = UIImage(CGImage: ref)
     self.ratingImgWidth.constant = rect.width/deviceScale
+    self.ratingImgWidth.active = true
     self.ratingImg.contentMode = .ScaleAspectFill
   }
   

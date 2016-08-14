@@ -34,8 +34,8 @@ class Choice: NSManagedObject {
   }
   
   func returnRatingPct() -> Float {
-    if let crit = self.criteria {
-      return self.returnAverageRating()/Float(crit.count)
+    if let _ = self.criteria {
+      return self.returnAverageRating()/5 // 5 is the highest rating
     }
     return 0
   }

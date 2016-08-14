@@ -25,7 +25,6 @@ class RateCriteriaVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     tableview.dataSource = self
     tableview.delegate = self
     
-    newChoice.setDefaultWeight()
     if let criteria = decision.baseCriteria?.allObjects as? [Criterion] {
       tempCriteria = criteria
     }
@@ -35,14 +34,18 @@ class RateCriteriaVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     appDel.managedObjectContext.insertObject(newChoice)
     newChoice.decision = decision
     newChoice.criteria = decision.baseCriteria
-    
-    // SET NEWCHOICE CRITERIA RATINGS TO WHAT WAS SELECTED IN THE TABLE CELLS
-    // ALSO POP BACK TO CHOICE LIST VC AND REFRESH TABLE
+    newChoice.setDefaultWeight()
     
     do {
       try appDel.managedObjectContext.save()
     } catch {
       print("\(error)")
+    }
+    
+    for controller in (self.navigationController?.viewControllers)! {
+      if controller.isKindOfClass(ChoiceListVC) {
+        self.navigationController?.popToViewController(controller as UIViewController, animated: true)
+      }
     }
     
   }
@@ -54,7 +57,6 @@ class RateCriteriaVC: UIViewController, UITableViewDelegate, UITableViewDataSour
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     if let cell = tableView.dequeueReusableCellWithIdentifier("rateCriteriaCell") as? RateCriteriaCell {
       cell.configureCell(withCriterion: (tempCriteria[indexPath.row]))
-      print("cell configured")
       return cell
     }
     return RateCriteriaCell()

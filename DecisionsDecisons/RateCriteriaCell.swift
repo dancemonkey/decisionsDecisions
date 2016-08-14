@@ -8,12 +8,11 @@
 
 import UIKit
 
-// ADD TOUCH HANDLERS TO EMPTY STAR IMAGES SO THEY CAN BE SELECTED AND PASS THAT SELECTION TO NEWCHOICE
-
 class RateCriteriaCell: UITableViewCell {
   
   @IBOutlet weak var criteriaTitle: UILabel!
-  @IBOutlet var emptyStarCollection: [UIImageView]!
+  @IBOutlet var emptyStarCollection: [RatingStarImageView]!
+  weak var criterion: Criterion?
   
   override func awakeFromNib() {
     super.awakeFromNib()
@@ -32,11 +31,31 @@ class RateCriteriaCell: UITableViewCell {
   }
   
   func starTapped(sender: UITapGestureRecognizer) {
-    print("\(sender.view?.tag) tapped")
+    
+    let tappedStar = (sender.view?.tag)!-1
+    let rating = Rating(rawValue: sender.view!.tag)
+    self.criterion!.setRating(to: rating!)
+    
+    // SET ALL STARS UP TO TAPPED STAR TO THE SELECTED STATE
+    var counter = 0
+    repeat {
+      emptyStarCollection[counter].select()
+      counter = counter + 1
+    } while counter <= tappedStar
+    
+    // SET THE REMAINING STARS TO THE DESELECTED STATE
+    if tappedStar < emptyStarCollection.count - 1 {
+      var counter = tappedStar + 1
+      repeat {
+        emptyStarCollection[counter].deSelect()
+        counter = counter + 1
+      } while counter < emptyStarCollection.count
+    }
   }
   
   func configureCell(withCriterion criterion: Criterion) {
     self.criteriaTitle.text = criterion.title!
+    self.criterion = criterion
   }
   
 }
